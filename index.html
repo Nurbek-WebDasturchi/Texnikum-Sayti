@@ -1,0 +1,2127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kollej</title>
+    <!-- Bootstrap Style -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- CSS style file -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- FontAwesome icosn-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark py-3 position-fixed">
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-semibold logo" href="./index.html">
+              <img src="/img/logo.jpg" alt="logo" class="logo-img" /> <br />
+              <div class="px-1">
+                KHT
+                <span class="m-0 p-0">Amudaryo</span>
+              </div>
+            </a>
+            <!-- Mobile toggle -->
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#main">Asosiy</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#faculties">Yo'nalishlar</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#news-dashboard">Yangiliklar</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#teachers">Ustozlar</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact-us">Bog'lanish</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <!-- Intro section -->
+        <section class="main-section d-flex" id="main">
+          <div class="row m-0 gap-0 main-row align-self-center p-md-3 p-1">
+            <h2 class="fw-bold intro-text p-md-0">
+              Oliy ta'limga yo'l <br />
+              bizning 1-sonli texnikumimizdan boshlanadi
+            </h2>
+            <div class="button-box">
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#moreInfoModal"
+                class="mt-3 apply-button"
+                id="main-btn">
+                Ariza topshirish
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- /Intro section -->
+        <!-- All Facultis -->
+        <section class="vh-auto faculties w-100" id="faculties">
+          <div class="row mx-0 d-flex justify-content-between gap-0">
+            <div class="col-12 text-center">
+              <div class="fw-bold fs-1 mt-5">Texnikumimiz yo'nalishlari</div>
+            </div>
+            <!-- 9-grade [daytime]-->
+            <div class="col-12">
+              <h3 class="fw-bold text-success text-uppercase mt-5">
+                <i class="bi bi-book"></i> Kunduzgi ta'lim
+              </h3>
+              <span class="text-dark fs-5 mt-0"
+                ><i class="bi bi-info-square-fill text-secondary"></i> 9-sinf
+                bitiruvchilari uchun</span
+              >
+            </div>
+            <!-- Faculties -->
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/avtomobil.jpg"
+                  class="img-fluid"
+                  alt="car service engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Avtomobillarni ta'mirlash va ularga xizmat ko'rsatish
+                  </div>
+                  <p>
+                    Avtomobillarni ta’mirlash va xizmat ko‘rsatish yo‘nalishida
+                    mashinalarni diagnostika qilish, ta'mirlash o‘rgatiladi. Bu
+                    kasb barqaror ish va zamonaviy mutaxassislikni ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/avtomobil.jpg"
+                    data-title="Avtomobillarni ta'mirlash va ularga xizmat ko'rsatish"
+                    data-desc="
+                      Avtomobillarni ta’mirlash va ularga xizmat ko‘rsatish — mashinalar dunyosining ustasi bo‘l! <br>
+                      Agar sen texnikaga qiziqsang, mashinalar bilan ishlashni xohlasang va real kasb egasi bo‘lishni istasang — bu yo‘nalish aynan sen uchun. Avtomobillarni ta’mirlash va xizmat ko‘rsatish — bu nafaqat motorlarni tuzatish, balki mashinalarni hayotiy va texnik jihatdan mukammal saqlash san’ati. <br>
+                      Bu yo‘nalishda sen: <br>
+                      ⚙️ Avtomobil tizimlarini, dvigatel, transmissiya va elektr qismlarini o‘rganasan <br>
+                      🛠 Mashinalarga texnik xizmat ko‘rsatish va ta’mirlashni amalda o‘zlashtirasan <br>
+                      🔍 Nosozliklarni aniqlash, diagnostika va muammolarni hal qilishni bilib olasan <br>
+                      💡 Zamonaviy texnologiyalar va servis usullaridan foydalanishni o‘rganasan <br>
+                      🤝 Mijozlarga xizmat ko‘rsatish va xavfsizlik qoidalarini tushunasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real mashinalar ustida ishlash orqali tezkor, aniqlik va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Avtomobil ustasi <br>
+                      Servis bo‘yicha mutaxassis <br>
+                      Texnik xizmat ko‘rsatish bo‘yicha konsultant <br>
+                      yoki o‘z shaxsiy servis markazingni ochish imkoniga ega bo‘lasan <br>
+                      👉 Mashinalarni bil, muammolarni hal qil — hayot osonlashadi! <br>
+                      Avtomobillarni ta’mirlash va xizmat ko‘rsatish — bu doim talabga ega va barqaror kelajak kasbi <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/elektro-mobil.png"
+                  class="img-fluid"
+                  alt="electro-car engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Elektromobillarga texnik xizmat ko'rsatish va ta'mirlash
+                  </div>
+                  <p>
+                    Elektromobillar — kelajak transporti! Ushbu yo‘nalishda sen
+                    zamonaviy elektromobillarning tuzilishi, batareya va elektr
+                    dvigatellar bilan ishlash, diagnostika va ta’mirlash
+                    o'rgatiladi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/elektro-mobil.png"
+                    data-title="Elektromobillarga texnik xizmat ko'rsatish va ta'mirlash"
+                    data-desc="
+                      Elektromobillar — kelajak transporti! <br>
+                      Agar sen zamonaviy mashinalarga, texnologiyaga va innovatsiyalarga qiziqsang, elektromobillar bilan ishlashni xohlasang — bu yo‘nalish aynan sen uchun! Bugun elektromobil — trend, ertaga esa eng talabgir kasb. <br>
+                      Bu yo‘nalishda sen:<br>
+                      🚗 Elektromobil tuzilishini chuqur o‘rganasan <br>
+                      🔋 Batareya tizimlari va ularning ishlash prinsipini tushunasan <br>
+                      ⚙️ Elektr dvigatellar, invertorlar va zaryadlash tizimlari bilan ishlaysan <br>
+                      🧠 Diagnostika qilish, nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      🛠 Elektromobillarga texnik xizmat ko‘rsatish va ta’mirlashni amaliy mashg‘ulotlar orqali bajarasiz <br>
+                      Darslar zamonaviy uskunalar bilan olib boriladi, o‘quvchilar real elektromobillar ustida ishlashadi. Bu yo‘nalish seni oddiy usta emas, balki yuqori malakali mutaxassis qilib tayyorlaydi. <br>
+                      📈 Bitirgach sen: <br>
+                      Elektromobil ustasi <br>
+                      Texnik diagnostika mutaxassisi <br>
+                      Zaryadlash stansiyalari bo‘yicha mutaxassis <br>
+                      yoki avtomobil sanoatida zamonaviy kasb egasi bo‘lishing mumkin <br>
+                      👉 Kelajak bugundan boshlanadi! <br>
+                      Elektromobillarga texnik xizmat ko‘rsatish va ta’mirlash — bu nafaqat kasb, bu barqaror va innovatsion kelajak sari qadam <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/payvandlovchi.jpg"
+                  class="img-fluid"
+                  alt="payvandlovchi engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Payvandlovchi</div>
+                  <p>
+                    Payvandlovchi yo‘nalishida metall qismlarni payvandlash,
+                    ulash va ta’mirlash amaliy mashg‘ulotlar orqali o‘rgatiladi.
+                    Bu kasb sanoat va qurilishda barqaror ish va doimiy talabni
+                    ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/payvandlovchi.jpg"
+                    data-title="Payvandlovchi"
+                    data-desc="
+                      Payvandlovchi — temirga jon beradigan kasb! <br>
+                      Agar sen kuchli, aniq va texnik ishlarni yoqtirsang, qo‘lingdan ish kelsa va real hunar egasi bo‘lishni istasang — payvandlovchi kasbi aynan sen uchun. Bugun payvandchi — qurilish, sanoat va ishlab chiqarishning eng zarur mutaxassislaridan biri. <br>
+                      Bu yo‘nalishda sen: <br>
+                      ⚙️ Payvandlash usullari (elektr, gaz va zamonaviy texnologiyalar)ni o‘rganasan <br>
+                      🔩 Metall konstruktsiyalarni ulash, mustahkamlash va ta’mirlashni bilib olasan <br>
+                      🛠 Chizmalar bilan ishlash va aniq o‘lchovlarga rioya qilishni o‘zlashtirasan <br>
+                      🔍 Sifat nazorati va xavfsizlik qoidalariga amal qilishni o‘rganasan <br>
+                      👨‍🏭 Ishlab chiqarish va qurilish maydonlarida amaliy tajriba to‘playsan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real sharoitda ishlashni, aniqlik va mas’uliyatni o‘rganadilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Payvandlovchi mutaxassis <br>
+                      Qurilish va sanoat korxonalarida usta <br>
+                      Texnik xizmat ko‘rsatish mutaxassisi <br>
+                      yoki o‘z hunaring bilan mustaqil daromad topish imkoniga ega bo‘lasan <br>
+                      👉 Kuchli hunar — mustahkam kelajak! <br>
+                      Payvandlovchi — bu qo‘l mehnati va texnik bilim uyg‘unlashgan, doim talabga ega kasb <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/elektrik.jpg"
+                  class="img-fluid"
+                  alt="elektrik engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Elektrik</div>
+                  <p>
+                    Elektrik yo‘nalishida elektr tarmoqlarini o‘rnatish, sozlash
+                    va ta’mirlash amaliy mashg‘ulotlar orqali o‘rgatiladi. Bu
+                    kasb doimiy talabga ega va barqaror ishni ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/elektrik.jpg"
+                    data-title="Elektrik"
+                    data-desc="
+                      Elektrik — yorug‘lik va quvvatni boshqaradigan kasb! <br>
+                      Agar sen texnikaga qiziqsang, simlar, tok va qurilmalar qanday ishlashini bilishni xohlasang hamda doim talabga ega hunar o‘rganishni istasang — elektrik kasbi aynan sen uchun. Elektriksiz hayotni tasavvur qilib bo‘lmaydi, demak bu kasb har doim kerak. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🔌 Elektr tarmoqlari va qurilmalarining tuzilishini o‘rganasan <br>
+                      ⚙️ Elektr montaj ishlari, ulash va sozlashni amalda bajarasan <br>
+                      🛠 Nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      📐 Elektr sxemalarini o‘qish va ularga ishlashni bilib olasan <br>
+                      ⚠️ Elektr xavfsizligi qoidalariga qat’iy amal qilishni o‘zlashtirasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real obyektlarda ishlashga tayyorlanib, aniqlik, mas’uliyat va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Elektrik mutaxassis <br>
+                      Elektr montaj ustasi <br>
+                      Texnik xizmat ko‘rsatish xodimi <br>
+                      yoki o‘z mustaqil ishini yo‘lga qo‘yish imkoniga ega bo‘lasan <br>
+                      👉 Tokni bilgan — hayotni yoritadi! <br>
+                      Elektrik — bu kuchli hunar, barqaror daromad va mustahkam kelajak garovi 
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/baliqchilik.webp"
+                  class="img-fluid"
+                  alt="baliqchilik engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Baliqchi</div>
+                  <p>
+                    Baliqchi yo‘nalishida baliq ovlash, parvarishlash va suv
+                    havzalarida ishlash amaliy mashg‘ulotlar orqali o‘rgatiladi.
+                    Bu kasb barqaror daromad va real hunarni ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/baliqchilik.webp"
+                    data-title="Baliqchi"
+                    data-desc="
+                      Baliqchi — suv bilan mehnat, mehnatdan baraka! <br>
+                      Agar sen tabiatni sevsang, suv bilan ishlashni yoqtirsang va amaliy, daromadli kasb egallashni istasang — baliqchi kasbi aynan sen uchun. Baliqchilik — oziq-ovqat xavfsizligi va qishloq xo‘jaligining muhim yo‘nalishlaridan biri. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🌊 Baliq ovlash usullari va texnologiyalarini o‘rganasan <br>
+                      🐠 Baliq turlarini farqlash, saqlash va parvarishlashni bilib olasan <br>
+                      🛶 Suv havzalarida xavfsiz ishlash qoidalarini o‘zlashtirasan <br>
+                      🧰 Baliq ovlash jihozlari va asbob-uskunalaridan to‘g‘ri foydalanishni o‘rganasan <br>
+                      📦 Olingan mahsulotni saralash, saqlash va yetkazib berishni bilib olasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real suv havzalarida amaliy mashg‘ulotlarda qatnashib, sabr, aniqlik va mas’uliyatni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Baliqchi mutaxassis <br>
+                      Baliqchilik xo‘jaligi xodimi <br>
+                      Suv xo‘jaligi sohasida ishchi <br>
+                      yoki o‘z baliqchilik faoliyatini yo‘lga qo‘yish imkoniga ega bo‘lasan <br>
+                      👉 Suvdan rizq top — mehnating bilan faxrlan! <br>
+                      Baliqchi — bu tabiat bilan uyg‘un, doim talabga ega kasb <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/parnik.jpg"
+                  class="img-fluid"
+                  alt="parnik engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Issiqxona va parnik xo'jaligi labaranti
+                  </div>
+                  <p>
+                    Issiqxona va parnik xo‘jaligi laboranti yo‘nalishida
+                    o‘simliklar rivoji, tuproq va suv tahlili hamda hosil
+                    sifatini nazorat qilish o‘rgatiladi. Bu kasb zamonaviy
+                    agrosohada muhim ahamiyatga ega.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/parnik.jpg"
+                    data-title="Issiqxona va parnik xo'jaligi labaranti"
+                    data-desc="
+                      Issiqxona va parnik xo‘jaligi laboranti — hosil sifatini nazorat qiluvchi mutaxassis! <br>
+                      Agar sen o‘simliklar, tabiat va aniq ishlarni yoqtirsang, hosil sifati va unumdorligini oshirishga hissa qo‘shishni istasang — bu yo‘nalish aynan sen uchun. Issiqxona va parnik xo‘jaligi laboranti — zamonaviy qishloq xo‘jaligining muhim bo‘g‘ini. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🌡 Issiqxona va parniklarda mikroiqlimni nazorat qilishni o‘rganasan <br>
+                      🌿 O‘simliklarning o‘sishi va rivojlanishini kuzatish va tahlil qilishni bilib olasan <br>
+                      🧪 Tuproq, suv va o‘g‘itlar bilan bog‘liq laboratoriya ishlarini o‘rganasan <br>
+                      📋 Hosil sifati, kasalliklar va zararkunandalarni aniqlashni o‘zlashtirasan <br>
+                      ⚙️ Issiqxona uskunalari bilan ishlash va texnik xavfsizlik qoidalarini bilib olasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real issiqxona va parnik sharoitida ishlashadi, aniqlik, mas’uliyat va kuzatuvchanlikni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Issiqxona laboranti <br>
+                      Parnik xo‘jaligi mutaxassisi <br>
+                      Agro-laboratoriya xodimi <br>
+                      Qishloq xo‘jaligi va agrotexnologiya sohalarida barqaror kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Sifatli hosil — ilmli nazoratdan boshlanadi! <br>
+                      Issiqxona va parnik xo‘jaligi laboranti — bu ilm, tajriba va tabiat uyg‘unlashgan kelajak kasbi.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/asalarichilik.jpeg"
+                  class="img-fluid w-100"
+                  alt="asalarichilik engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Asalarichi</div>
+                  <p>
+                    Asalarichi yo‘nalishida ari boqish, ularning uyalarini
+                    parvarishlash va asal mahsulotlarini olish amaliy
+                    mashg‘ulotlar orqali o‘rgatiladi. Bu kasb foydali, barqaror
+                    va doim talabga ega.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/asalarichilik.jpeg"
+                    data-title="Asalarichi"
+                    data-desc="
+                      Asalarichi — tabiiy shirinlik va sog‘lik saqlovchisi! <br>
+                      Agar sen tabiatni sevsang, o‘simliklar va hayvonlar bilan ishlashni yoqtirsang hamda foydali va barqaror kasb egallashni istasang — asalarichi yo‘nalishi aynan sen uchun. Asalarichilik — nafaqat shirin asal, balki sog‘liq va ekotizimni saqlashning muhim qismi. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🍯 Asal ari boqish, ularning parvarishi va uyalarini nazorat qilishni o‘rganasan <br>
+                      🐝 Ari hayoti va biologiyasini, turli ari turlarini bilib olasan <br>
+                      🛠 Asalarichilik jihozlari va vositalaridan foydalanishni o‘zlashtirasan <br>
+                      🌸 O‘simliklar bilan ishlash va polinatsiya jarayonini tushunasan <br>
+                      📦 Mahsulot sifatini nazorat qilish va xavfsizlik qoidalariga amal qilasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real asalarichilik sharoitida ishlashadi, mas’uliyat, sabr-toqat va aniqlikni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Asalarichi mutaxassis <br>
+                      Asal va arichilik mahsulotlarini ishlab chiqaruvchi <br>
+                      Agro-ekologiya va qishloq xo‘jaligi sohasida ishchi <br>
+                      yoki o‘z asalarichilik xo‘jaligini yo‘lga qo‘yish imkoniga ega bo‘lasan <br>
+                      👉 Tabiatni bil — shirinlik olib kel! <br>
+                      Asalarichi — bu tabiat bilan uyg‘un, barqaror va talab yuqori kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/o'rmonchilik.jpg"
+                  class="img-fluid"
+                  alt="o'rmonchilik engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    O'rmonchilik va ko'kalamzorlashtirish labaranti
+                  </div>
+                  <p>
+                    O‘rmonchilik va ko‘kalamzorlashtirish laboranti yo‘nalishiga
+                    o‘simliklar o‘sishini nazorat qilish, tuproq va ko‘chatlar
+                    bilan ishlash hamda yashil hududlarni parvarishlash kiradi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/o'rmonchilik.jpg"
+                    data-title="O'rmonchilik va ko'kalamzorlashtirish labaranti"
+                    data-desc="
+                      O‘rmonchilik va ko‘kalamzorlashtirish laboranti — yashil muhitni ilm bilan asrovchi mutaxassis! <br>
+                      Agar sen tabiatni sevsang, o‘simliklar bilan ishlashni yoqtirsang va atrof-muhitni yanada yashil va chiroyli qilishga hissa qo‘shishni istasang — bu yo‘nalish aynan sen uchun. O‘rmonchilik va ko‘kalamzorlashtirish laboranti tabiatni muhofaza qilishda muhim rol o‘ynaydi. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🌱 Daraxt va manzarali o‘simliklarning o‘sishi va rivojlanishini o‘rganasan <br>
+                      🧪 Tuproq, urug‘ va ko‘chatlar bilan bog‘liq laboratoriya ishlarini bajarasan <br>
+                      🌳 O‘rmon va yashil hududlarni barpo etish hamda parvarishlashni bilib olasan <br>
+                      🐞 O‘simlik kasalliklari va zararkunandalarni aniqlashni o‘rganasan <br>
+                      📋 Ekologiya va ko‘kalamzorlashtirishda xavfsizlik qoidalariga amal qilasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real yashil hududlar, pitomniklar va laboratoriyalarda ishlashadi, aniqlik va mas’uliyatni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      O‘rmonchilik laboranti <br>
+                      Ko‘kalamzorlashtirish bo‘yicha mutaxassis <br>
+                      Ekologiya va atrof-muhit muhofazasi xodimi <br>
+                      Qishloq xo‘jaligi va tabiatni muhofaza qilish sohalarida barqaror kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Bugun ekilgan ko‘chat — ertangi hayot!<br>
+                      O‘rmonchilik va ko‘kalamzorlashtirish laboranti — bu tabiat va ilm uyg‘unlashgan kelajak kasbi.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/tikuvchi.jpg"
+                  class="img-fluid"
+                  alt="tikuvchi engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Tikuvchi</div>
+                  <p>
+                    Tikuvchi yo‘nalishida kiyim tikish, ta’mirlash va dizayn
+                    asoslari amaliy mashg‘ulotlar orqali o‘rgatiladi. Bu kasb
+                    ijodiy va barqaror daromad manbai hisoblanadi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/tikuvchi.jpg"
+                    data-title="Tikuvchi"
+                    data-desc="
+                      Tikuvchi — matodan san’at yaratadigan kasb! <br>
+                      Agar sen ijodkor bo‘lsang, dizayn va moda seni qiziqtirsa hamda qo‘ling bilan chiroyli buyumlar yaratishni istasang — tikuvchi kasbi aynan sen uchun. Tikuvchilik — bu faqat kiyim tikish emas, bu did, aniqlik va mehnat uyg‘unligidir. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🧵 Tikuvchilik asoslari va texnikalarini o‘rganasan <br>
+                      ✂️ Gazlama turlari bilan ishlash va to‘g‘ri tanlashni bilib olasan <br>
+                      📐 Andoza olish, bichish va tikishni amalda bajarasan <br>
+                      👗 Kiyimlarni ta’mirlash va moslashtirishni o‘rganasan <br>
+                      🎨 Dizayn elementlari va zamonaviy uslublar bilan tanishasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real buyurtmalar asosida ishlashni, aniqlik va ijodiy fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Tikuvchi mutaxassis <br>
+                      Tikuv sexi xodimi <br>
+                      Moda va dizayn sohasida ishchi <br>
+                      yoki o‘z shaxsiy tikuvchilik ustaxonasini ochish imkoniga ega bo‘lasan <br>
+                      👉 Ijod qil, tik, o‘z uslubingni yarat! <br>
+                      Tikuvchi — bu san’at va hunar uyg‘unlashgan, doim talabga ega kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/quyosh-panellari.jpg"
+                  class="img-fluid"
+                  alt="sun engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Quyosh panellarini o'rnatish va ularga texnik xizmat
+                    ko'rsatish
+                  </div>
+                  <p>
+                    Quyosh panellarini o‘rnatish va ularga texnik xizmat
+                    ko‘rsatish yo‘nalishida panellarni montaj qilish, sozlash va
+                    servis ishlari amaliy mashg‘ulotlar orqali o‘rgatiladi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/quyosh-panellari.jpg"
+                    data-title="
+                      Quyosh panellarini o'rnatish va ularga texnik xizmat
+                      ko'rsatish
+                    "
+                    data-desc="
+                      Quyosh panellarini o‘rnatish va ularga texnik xizmat ko‘rsatish — toza energiya ustasi bo‘l! <br>
+                      Agar sen texnologiya, elektr va ekologiyaga qiziqsang hamda zamonaviy, kelajagi bor kasb egallashni istasang — bu yo‘nalish aynan sen uchun. Quyosh energiyasi bugun nafaqat muqobil manba, balki eng tez rivojlanayotgan sohalardan biri. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🔆 Quyosh panellari va ularning ishlash prinsipini o‘rganasan <br>
+                      ⚙️ Panellarni to‘g‘ri o‘rnatish, ulash va sozlashni amalda bajarasan <br>
+                      🔌 Invertorlar, akkumulyatorlar va elektr tizimlari bilan ishlashni bilib olasan <br>
+                      🛠 Texnik xizmat ko‘rsatish, nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      ⚠️ Elektr va balandlikda ishlash xavfsizligi qoidalariga amal qilasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real obyektlarda quyosh panellari bilan ishlashadi, aniqlik, mas’uliyat va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Quyosh panellari montajchisi <br>
+                      Qayta tiklanuvchi energiya mutaxassisi <br>
+                      Texnik xizmat ko‘rsatish ustasi <br>
+                      yoki energetika sohasida zamonaviy kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Quyoshdan quvvat ol — kelajakni yorit! <br>
+                      Quyosh panellarini o‘rnatish va ularga texnik xizmat ko‘rsatish — bu ekologiya va texnologiyani birlashtirgan kelajak kasbi.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/elevator-omuxta.jpg"
+                  class="img-fluid"
+                  alt="omuxta engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Elevator, tegirmon, yorma va omuxta yem ishlab chiqarish
+                  </div>
+                  <p>
+                    Elevator, tegirmon, yorma va omuxta yem ishlab chiqarish
+                    yo‘nalishida donni saqlash, qayta ishlash va sifatli
+                    mahsulot tayyorlash jarayonlari amaliy mashg‘ulotlar orqali
+                    o‘rgatiladi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/elevator-omuxta.jpg"
+                    data-title="
+                      Elevator, tegirmon, yorma va omuxta yem ishlab chiqarish
+                    "
+                    data-desc="
+                      Elevator, tegirmon, yorma va omuxta yem ishlab chiqarish — donni qiymatga aylantiradigan kasb! <br>
+                      Agar sen texnika, ishlab chiqarish va oziq-ovqat sanoatiga qiziqsang hamda real va barqaror kasb egallashni istasang — bu yo‘nalish aynan sen uchun. Donni qabul qilishdan tortib, tayyor mahsulotgacha bo‘lgan jarayonni bilish bugun juda katta ahamiyatga ega. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🏭 Elevator xo‘jaligi va donni saqlash texnologiyalarini o‘rganasan <br>
+                      ⚙️ Tegirmon uskunalari va ularning ishlash prinsipini bilib olasan <br>
+                      🌾 Yorma va un mahsulotlarini ishlab chiqarish jarayonlarini o‘zlashtirasan <br>
+                      🧪 Mahsulot sifati nazorati va texnologik jarayonlarni tushunasan <br>
+                      🛠 Uskunalarga texnik xizmat ko‘rsatish va xavfsizlik qoidalariga amal qilasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real ishlab chiqarish sharoitlariga yaqin muhitda ishlashadi, aniqlik va mas’uliyatni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Elevator operatori <br>
+                      Tegirmon va yorma ishlab chiqarish mutaxassisi <br>
+                      Omuxta yem ishlab chiqarish ustasi <br>
+                      Oziq-ovqat sanoatida doim talabga ega mutaxassis bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Donni asra — sifatni yarat! <br>
+                      Elevator, tegirmon, yorma va omuxta yem ishlab chiqarish — bu oziq-ovqat xavfsizligi uchun muhim, barqaror kelajak kasbi.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/qurilish.jpg"
+                  class="img-fluid"
+                  alt="building engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Qurilish ishlari ishchisi</div>
+                  <p>
+                    Qurilish ishlari ishchisi yo‘nalishida qurilish va
+                    ta’mirlashning asosiy turlari amaliy mashg‘ulotlar orqali
+                    o‘rgatiladi. Bu kasb barqaror ish va real hunarni
+                    ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/qurilish.jpg"
+                    data-title="Qurilish ishlari ishchisi"
+                    data-desc="
+                      Qurilish ishlari ishchisi — shaharlar va kelajakni bunyod etuvchi kasb! <br>
+                      Agar sen jismoniy mehnatdan qo‘rqmasang, aniq va mas’uliyatli ishlarni yoqtirsang hamda real hunar egallashni istasang — bu yo‘nalish aynan sen uchun. Qurilish — har doim rivojlanib boradigan va doim ish bor soha. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🧱 Qurilish ishlarining asosiy turlari bilan tanishasan <br>
+                      🛠 Beton, g‘isht, suvoq va pardozlash ishlarini o‘rganasan <br>
+                      📐 O‘lchov, belgilash va qurilish asboblaridan foydalanishni bilib olasan <br>
+                      ⚠️ Mehnat muhofazasi va texnika xavfsizligi qoidalariga amal qilasan <br>
+                      🤝 Jamoa bilan ishlash va ishni sifatli bajarishni o‘rganasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real qurilish obyektlariga yaqin sharoitda ishlashadi, chidamlilik, aniqlik va mas’uliyatni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Qurilish ishchisi <br>
+                      Qurilish brigadasi a’zosi <br>
+                      Ta’mirlash va pardozlash ustasi <br>
+                      Qurilish sohasida barqaror daromadli kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Mehnat qil — iz qoldir! <br>
+                      Qurilish ishlari ishchisi — bu jamiyat rivoji uchun muhim, doim talabga ega kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/qishloq-mexanik.jpg"
+                  class="img-fluid"
+                  alt="village engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Qishloq xo'jaligi mashinalarini ta'mirlash chilangari
+                  </div>
+                  <p>
+                    Qishloq xo‘jaligiga mashinalarini ta’mirlash chilangari
+                    yo‘nalishida traktor va kombaynlarni ta’mirlash, sozlash
+                    hamda texnik xizmat ko‘rsatish kiradi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/qishloq-mexanik.jpg"
+                    data-title="
+                      Qishloq xo'jaligi mashinalarini ta'mirlash chilangari
+                    "
+                    data-desc="
+                      Qishloq xo‘jaligi mashinalarini ta’mirlash chilangari — texnika ishlasa, hosil baraka topadi! <br>
+                      Agar sen texnikani yoqtirsang, mexanizmlarning qanday ishlashini bilishni istasang va real, zarur kasb egallashni xohlasang — bu yo‘nalish aynan sen uchun. Traktor, kombayn va boshqa qishloq xo‘jaligi mashinalarisiz zamonaviy dehqonchilikni tasavvur qilib bo‘lmaydi. <br>
+                      Bu yo‘nalishda sen: <br>
+                      ⚙️ Qishloq xo‘jaligi texnikalarining tuzilishini o‘rganasan <br>
+                      🔧 Traktor, kombayn va agregatlarni ta’mirlash hamda sozlashni bilib olasan <br>
+                      🛠 Mexanik uzellar, gidravlika va uzatmalar bilan ishlashni o‘zlashtirasan <br>
+                      🔍 Nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      ⚠️ Texnika xavfsizligi va mehnat muhofazasi qoidalariga amal qilasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real qishloq xo‘jaligi texnikalari ustida ishlashadi, aniqlik, mas’uliyat va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Qishloq xo‘jaligi texnikasi chilangari <br>
+                      Ta’mirlash ustasi <br>
+                      Texnik xizmat ko‘rsatish mutaxassisi <br>
+                      Qishloq xo‘jaligi va servis sohalarida barqaror ish o‘rniga ega bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Texnika soz bo‘lsa — hosil mo‘l bo‘ladi! <br>
+                      Qishloq xo‘jaligi mashinalarini ta’mirlash chilangari — bu dehqonchilik rivoji uchun muhim, doim talabga ega kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/oqava-suv.jpg"
+                  class="img-fluid"
+                  alt="oqava engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Oqava suv va suv ta'minoti tizimlaridan foydalanish va
+                    montaj qilish ustasi
+                  </div>
+                  <p>
+                    Oqava suv va suv ta’minoti tizimlaridan foydalanish va
+                    montaj qilish ustasi yo‘nalishiga suv tizimlarini o‘rnatish.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/oqava-suv.jpg"
+                    data-title="
+                      Oqava suv va suv ta'minoti tizimlaridan foydalanish va
+                      montaj qilish ustasi
+                    "
+                    data-desc="
+                      Oqava suv va suv ta’minoti tizimlaridan foydalanish va montaj qilish ustasi — hayotiy quvvat ustasi! <br>
+                      Agar sen texnika va suv tizimlariga qiziqsang, odamlar hayotida toza suv ta’minotini ta’minlashni xohlasang va amaliy kasb egallashni istasang — bu yo‘nalish aynan sen uchun. Suv hayotdir, va bu kasb — jamiyat uchun muhim, doim talabga ega kasblardan biridir. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🚰 Suv ta’minoti va oqava suv tizimlari asoslarini o‘rganasan <br>
+                      ⚙️ Suv quvurlari, nasoslar va aralash tizimlarni montaj qilishni bilib olasan <br>
+                      🛠 Tizimlarni texnik xizmat ko‘rsatish, nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      📋 Suv sifati va xavfsizlik qoidalarini nazorat qilishni bilib olasan <br>
+                      🤝 Jamoa bilan ishlash va tizimlarni samarali boshqarishni o‘zlashtirasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real suv ta’minoti va oqava suv tizimlari bilan ishlashadi, aniqlik, mas’uliyat va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Suv ta’minoti va oqava suv tizimlari ustasi <br>
+                      Texnik xizmat ko‘rsatish mutaxassisi <br>
+                      Suv va kanalizatsiya sohasida ishchi <br>
+                      yoki o‘z montaj va servis faoliyatini boshlash imkoniga ega bo‘lasan <br>
+                      👉 Toza suvni boshqar — hayotni yorit! <br>
+                      Oqava suv va suv ta’minoti tizimlaridan foydalanish va montaj qilish ustasi — bu jamiyat uchun zarur va doim talabga ega kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/nasos.png"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Nasos va nasos stansiyalariga xizmat ko'rsatish va
+                    ta'mirlash chilangari
+                  </div>
+                  <p>
+                    Bu yo‘nalishida nasoslarni o‘rnatish, ta’mirlash va texnik
+                    xizmat ko‘rsatish amaliy mashg‘ulotlar orqali o‘rgatiladi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/nasos.png"
+                    data-title="
+                      Nasos va nasos stansiyalariga xizmat ko'rsatish va
+                      ta'mirlash chilangari
+                    "
+                    data-desc="
+                      Nasos va nasos stansiyalariga xizmat ko‘rsatish va ta’mirlash chilangari — suv va energiya ishchisi! <br>
+                      Agar sen texnika va mexanizmga qiziqsang, nosozliklarni aniqlash va ularni hal qilishni yoqtirsang hamda amaliy, doim talabga ega kasb egallashni istasang — bu yo‘nalish aynan sen uchun. Nasos stansiyalari nafaqat suv ta’minoti, balki sanoat va qishloq xo‘jaligi uchun ham muhim tizimdir. <br>
+                      Bu yo‘nalishda sen: <br>
+                      ⚙️ Nasoslar, nasos stansiyalari va ularning ishlash prinsipini o‘rganasan <br>
+                      🛠 Mexanik uzellar, elektr motorlar va boshqa texnik qismlarni ta’mirlashni bilib olasan <br>
+                      🔍 Nosozliklarni aniqlash va tezkor bartaraf etish amaliyotini o‘rganasan <br>
+                      📋 Texnik xizmat ko‘rsatish va xavfsizlik qoidalariga amal qilishni o‘zlashtirasan <br>
+                      🤝 Jamoa bilan ishlash va tizimlarni samarali boshqarishni o‘rganasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real nasos stansiyalari va uskunalar bilan ishlashadi, aniqlik, mas’uliyat va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Nasos va nasos stansiyalari ustasi <br>
+                      Texnik xizmat ko‘rsatish mutaxassisi <br>
+                      Sanoat va suv ta’minoti sohasida ishchi <br>
+                      yoki o‘z mustaqil xizmat ko‘rsatish faoliyatini yo‘lga qo‘yish imkoniga ega bo‘lasan <br>
+                      👉 Suv tizimlari ishlasa — hayot oqadi! <br>
+                      Nasos va nasos stansiyalariga xizmat ko‘rsatish va ta’mirlash chilangari — bu doim talabga ega va barqaror kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /Faculties -->
+            <!-- 11-grade [daytime] -->
+            <div class="col-12">
+              <h3 class="fw-bold text-success text-uppercase mt-5">
+                <i class="bi bi-book"></i> Kunduzgi ta'lim
+              </h3>
+              <span class="text-dark fs-5 mt-0"
+                ><i class="bi bi-info-square-fill text-secondary"></i> 11-sinf
+                bitiruvchilari uchun</span
+              >
+            </div>
+            <!-- Faculties -->
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/computer-science.jpg"
+                  class="img-fluid"
+                  alt="computer engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Kompyuter tizimlari va majmualari
+                  </div>
+                  <p>
+                    Kompyuter tizimlari va katta-katta tizimlar qanday
+                    qurilganini o'rganasiz va ITga birinchi qadamni qo'yasiz.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/computer-science.jpg"
+                    data-title=" Kompyuter tizimlari va majmualari"
+                    data-desc="
+                      Agar sen texnologiyaga qiziqsang, kompyuterlar qanday ishlashini bilishni xohlasang va kelajakda IT sohasida kuchli mutaxassis bo‘lishni orzu qilsang — bu yo‘nalish aynan sen uchun! <br>
+                      Bu yo‘nalishda sen: <br>
+                      🖥 Kompyuter va noutbuklarning ichki tuzilishini o‘rganasan <br>
+                      ⚙️ Operatsion tizimlar qanday ishlashini tushunasan <br>
+                      🌐 Tarmoqlar, serverlar va internet asoslarini bilib olasan <br>
+                      🔧 Kompyuterlarni yig‘ish, sozlash va ta’mirlashni amalda bajarasiz <br>
+                      🚀 Zamonaviy texnologiyalar bilan ishlashni o‘rganib, real kasb egasi bo‘lasan <br>
+
+                      Darslar faqat nazariya emas, ko‘proq amaliy mashg‘ulotlar asosida o‘tiladi. O‘zing qo‘ling bilan kompyuter yig‘asan, muammolarni topib hal qilasan va texnik fikrlashingni rivojlantirasan. <br>
+                      📈 Bitirgach esa: <br>
+                      IT mutaxassis <br>
+                      Tizim administratori <br>
+                      Texnik xizmat ko‘rsatish ustasi <br>
+                      yoki keyinchalik dasturchilik va boshqa IT yo‘nalishlarga oson o‘tish imkoniga ega bo‘lasan <br>
+                      👉 Bugun o‘rgan — ertaga kuchli mutaxassis bo‘l! <br>
+                      Kompyuter tizimlari va majmualari — bu shunchaki yo‘nalish emas, bu kelajakka ochilgan eshik 🔥
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/elektro-mobil.png"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Elektromobillarga texnik xizmat ko'rsatish va ta'mirlash
+                  </div>
+                  <p>
+                    Elektromobillar — kelajak transporti! Ushbu yo‘nalishda sen
+                    zamonaviy elektromobillarning tuzilishi, batareya va elektr
+                    dvigatellar bilan ishlash, diagnostika va ta’mirlashni
+                    o‘rganasan.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/elektro-mobil.png"
+                    data-title=" Elektromobillarga texnik xizmat ko'rsatish va ta'mirlash"
+                    data-desc="
+                      ⚡ Elektromobillar — kelajak transporti! <br>
+                      Agar sen zamonaviy mashinalarga, texnologiyaga va innovatsiyalarga qiziqsang, elektromobillar bilan ishlashni xohlasang — bu yo‘nalish aynan sen uchun! Bugun elektromobil — trend, ertaga esa eng talabgir kasb. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🚗 Elektromobil tuzilishini chuqur o‘rganasan <br>
+                      🔋 Batareya tizimlari va ularning ishlash prinsipini tushunasan <br>
+                      ⚙️ Elektr dvigatellar, invertorlar va zaryadlash tizimlari bilan ishlaysan <br>
+                      🧠 Diagnostika qilish, nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      🛠 Elektromobillarga texnik xizmat ko‘rsatish va ta’mirlashni amaliy mashg‘ulotlar orqali bajarasiz <br>
+                      Darslar zamonaviy uskunalar bilan olib boriladi, o‘quvchilar real elektromobillar ustida ishlashadi. Bu yo‘nalish seni oddiy usta emas, balki yuqori malakali mutaxassis qilib tayyorlaydi. <br>
+                      📈 Bitirgach sen:<br>
+                      Elektromobil ustasi<br>
+                      Texnik diagnostika mutaxassisi <br>
+                      Zaryadlash stansiyalari bo‘yicha mutaxassis <br>
+                      yoki avtomobil sanoatida zamonaviy kasb egasi bo‘lishing mumkin <br>
+                      👉 Kelajak bugundan boshlanadi! <br>
+                      Elektromobillarga texnik xizmat ko‘rsatish va ta’mirlash — bu nafaqat kasb, bu barqaror va innovatsion kelajak sari qadam ⚡🔥
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/fermer-xojaligi.jpg"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">Fermer xo'jaligini boshqarish</div>
+                  <p>
+                    Fermer xo‘jaligini boshqarish yo‘nalishida mahsulot
+                    yetishtirish, resurslarni samarali boshqarish va
+                    agro-biznesni rivojlantirish amaliy mashg‘ulotlar orqali
+                    o‘rgatiladi. Bu kasb barqaror ish va zamonaviy agrar sohada
+                    talab yuqori.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/fermer-xojaligi.jpg"
+                    data-title="Fermer xo'jaligini boshqarish"
+                    data-desc="
+                      🌾 Fermer xo‘jaligini boshqarish — yerda boshlanib, daromadda yakunlanadi! <br>
+                      Agar sen tabiatni sevsang, yer bilan ishlashni xohlasang va o‘z biznesingni yuritishni orzu qilsang — bu yo‘nalish aynan sen uchun. Fermer xo‘jaligini boshqarish — bu faqat ekish yoki yig‘im-terim emas, bu reja, hisob-kitob va zamonaviy boshqaruv demakdir. <br>
+                      Bu yo‘nalishda sen: <br>
+                      🚜 Fermer xo‘jaligini tashkil etish va boshqarishni o‘rganasan <br>
+                      🌱 Ekinlar va chorvachilik asoslarini tushunasan <br>
+                      💧 Sug‘orish, yerga ishlov berish va texnikalardan samarali foydalanishni bilib olasan <br>
+                      📊 Xarajat, foyda, rejalashtirish va hisob-kitob yuritishni o‘rganasan <br>
+                      🤝 Mahsulotni saqlash, qayta ishlash va bozorga chiqarish jarayonlarini tushunasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real fermer xo‘jaliklari misolida ishlashadi, zamonaviy agrotexnologiyalar bilan tanishadilar va mustaqil qaror qabul qilishni o‘rganadilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Fermer xo‘jaligi rahbari <br>
+                      Agro-menejer <br>
+                      Qishloq xo‘jaligi mutaxassisi <br>
+                      yoki o‘z shaxsiy fermer biznesini yo‘lga qo‘yish imkoniga ega bo‘lasan <br>
+                      👉 Bugungi mehnat — ertangi baraka! <br>
+                      Fermer xo‘jaligini boshqarish — bu yer bilan ishlash orqali barqaror daromad va mustahkam kelajak sari yo‘l
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /Faculties -->
+            <!-- 11-grade [dual] -->
+            <div class="col-12">
+              <h3 class="fw-bold text-success text-uppercase mt-5">
+                <i class="bi bi-book"></i> Dual ta'lim
+              </h3>
+              <span class="text-dark fs-5 mt-0"
+                ><i class="bi bi-info-square-fill text-secondary"></i> 11-sinf
+                bitiruvchilari uchun</span
+              >
+            </div>
+            <!-- Faculties -->
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/nasos.png"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Nasos stansiyalari va nasos qurilmalari mashinisti
+                  </div>
+                  <p>
+                    Nasos stansiyalari va nasos qurilmalari mashinisti
+                    yo‘nalishida suv uzatish tizimlarini boshqarish, nasoslarni
+                    sozlash va ta’mirlash amaliy mashg‘ulotlar orqali
+                    o‘rgatiladi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/nasos.png"
+                    data-title="Nasos stansiyalari va nasos qurilmalari mashinisti"
+                    data-desc="
+                      Nasos stansiyalari va nasos qurilmalari mashinisti — hayot oqimini boshqaradigan kasb! <br>
+                      Agar sen texnikaga qiziqsang, mexanizmlarning qanday ishlashini bilishni xohlasang va muhim, mas’uliyatli kasb egasi bo‘lishni istasang — bu yo‘nalish aynan sen uchun. Nasos stansiyalari suv, energetika va qishloq xo‘jaligining yuragi hisoblanadi. <br>
+                      Bu yo‘nalishda sen: <br>
+                      ⚙️ Nasos stansiyalari va qurilmalarining tuzilishini o‘rganasan <br>
+                      Suv uzatish va bosim tizimlarining ishlash prinsipini tushunasan <br>
+                      🔩 Nasoslarni ishga tushirish, to‘xtatish va nazorat qilishni bilib olasan <br>
+                      🛠 Texnik xizmat ko‘rsatish, nosozliklarni aniqlash va bartaraf etishni o‘rganasan <br>
+                      📋 Xavfsizlik qoidalari va mehnat muhofazasiga qat’iy rioya qilishni amalda o‘zlashtirasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real nasos qurilmalari bilan ishlashadi, mas’uliyat, aniqlik va texnik fikrlashni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Nasos stansiyasi mashinisti <br>
+                      Suv xo‘jaligi mutaxassisi <br>
+                      Texnik xizmat ko‘rsatish ustasi <br>
+                      Energetika va irrigatsiya sohalarida barqaror ish o‘rniga ega bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Suv bo‘lsa — hayot bor! <br>
+                      Nasos stansiyalari va nasos qurilmalari mashinisti — bu jamiyat uchun zarur, doimiy talabga ega kasb <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/kutubxonachi.jpg"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Kutubxonashunoslik va bibliografiya
+                  </div>
+                  <p>
+                    Kutubxonashunoslik va bibliografiya yo‘nalishida kitoblar va
+                    axborot manbalarini tartiblash o‘rgatiladi. Bu yo‘nalish
+                    bilim va madaniyat sohasida barqaror kasbni ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/kutubxonachi.jpg"
+                    data-title="Kutubxonashunoslik va bibliografiya"
+                    data-desc="
+                      Kutubxonashunoslik va bibliografiya — bilimlar bilan ishlash san’ati! <br>
+                      Agar sen kitoblarni sevsang, tartib, izlanish va bilim bilan ishlash seni qiziqtirsa, ma’lumotlar olamida yo‘l ko‘rsatuvchi mutaxassis bo‘lishni istasang — bu yo‘nalish aynan sen uchun. Kutubxonashunoslik va bibliografiya — bu faqat kitob berish emas, bu bilimni topish, saqlash va yetkazish san’atidir. <br>
+                      Bu yo‘nalishda sen: <br>
+                      📖 Kutubxona ishining asoslari va tizimini o‘rganasan <br>
+                      🗂 Kitoblar, hujjatlar va elektron manbalarni tartiblashni bilib olasan <br>
+                      🔍 Bibliografik izlanish, ma’lumot qidirish va tahlil qilishni o‘rganasan <br>
+                      💻 Elektron kutubxonalar va raqamli kataloglar bilan ishlaysan <br>
+                      🤝 O‘quvchilar va foydalanuvchilar bilan samarali muloqot qilishni o‘zlashtirasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real kutubxonalar misolida ishlashadi, axborot bilan ishlash madaniyati va aniqlikni rivojlantiradilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Kutubxonachi <br>
+                      Bibliograf <br>
+                      Axborot-resurs markazi mutaxassisi <br>
+                      Ta’lim muassasalari va madaniyat sohalarida barqaror kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                      👉 Bilim — eng katta boylik! <br>
+                      Kutubxonashunoslik va bibliografiya — bu jamiyatda doimo qadrlanadigan, ma’naviy va barqaror kelajak sari yetaklovchi kasb.
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/o'rmonchilik.jpg"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">O'rmonchilik</div>
+                  <p>
+                    O‘rmonchilik yo‘nalishida o‘rmonlarni barpo etish,
+                    parvarishlash va muhofaza qilish amaliy mashg‘ulotlar orqali
+                    o‘rgatiladi. Bu kasb tabiatni asrash va ekologik muvozanatni
+                    saqlashda muhim ahamiyatga ega.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/o'rmonchilik.jpg"
+                    data-title="O'rmonchilik"
+                    data-desc="
+                    O‘rmonchilik — tabiatni asrab, kelajakni barpo et! <br>
+                    Agar sen tabiatni sevsang, daraxtlar, o‘simliklar va atrof-muhit bilan ishlashni xohlasang hamda yer yuzini yashil saqlashga hissa qo‘shishni istasang — bu yo‘nalish aynan sen uchun. O‘rmonchilik — bu nafaqat kasb, balki katta mas’uliyat va ezgu missiya. <br>
+                    Bu yo‘nalishda sen: <br>
+                    🌱 O‘rmonlarni barpo etish, parvarishlash va muhofaza qilishni o‘rganasan <br>
+                    🌳 Daraxt va o‘simlik turlarini tanish va parvarishlashni bilib olasan <br>
+                    🔥 O‘rmon yong‘inlarining oldini olish va tabiatni asrash choralarini tushunasan <br>
+                    🌍 Ekologiya va atrof-muhit muhofazasi asoslarini o‘zlashtirasan <br>
+                    🛠 O‘rmon xo‘jaligida ishlatiladigan texnika va jihozlar bilan tanishasan <br>
+                    Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real o‘rmon hududlarida amaliy mashg‘ulotlarda qatnashib, tabiat bilan ishlash tajribasini to‘plashadi. <br>
+                    📈 Bitirgach esa: <br>
+                    O‘rmon xo‘jaligi mutaxassisi <br>
+                    O‘rmon parvarishi va muhofazasi xodimi <br>
+                    Ekologiya sohasida mutaxassis <br>
+                    yoki tabiatni muhofaza qilish yo‘nalishlarida barqaror kasb egasi bo‘lish imkoniga ega bo‘lasan <br>
+                    👉 Bugun ekilgan daraxt — ertangi hayot! <br>
+                    O‘rmonchilik — bu tabiatni asrab-avaylash orqali barqaror va sog‘lom kelajak sari yo‘l
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+              <div class="faculty-card">
+                <img
+                  src="/img/faculties/baliqchilik-tech.jpg"
+                  class="img-fluid"
+                  alt="mechanical engineering" />
+                <div class="faculty-info">
+                  <div class="fw-bold fs-4">
+                    Baliqchilik xo'jaligini tashkil etish texnologiyasi
+                  </div>
+                  <p>
+                    Baliqchilik xo‘jaligini tashkil etish texnologiyasi
+                    yo‘nalishida baliq yetishtirish, parvarishlash va xo‘jalikni
+                    boshqarish o‘rgatiladi. Bu yo‘nalish barqaror daromad kasbni
+                    ta’minlaydi.
+                  </p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#moreInfoModal"
+                    class="bg bg-dark fw-bold text-white p-2 w-100 info-btn"
+                    data-img="/img/faculties/baliqchilik-tech.jpg"
+                    data-title="Baliqchilik xo'jaligini tashkil etish texnologiyasi"
+                    data-desc="
+                      Baliqchilik xo‘jaligini tashkil etish texnologiyasi — suvdan daromad, mehnatdan baraka! <br>
+                      Agar sen suv xo‘jaligi, tabiat va biznesga qiziqsang hamda o‘z daromadli xo‘jaligingni yo‘lga qo‘yishni istasang — bu yo‘nalish aynan sen uchun. Baliqchilik — bugungi kunda tez rivojlanayotgan va talab yuqori bo‘lgan sohalardan biri. <br>
+                      Bu yo‘nalishda sen:<br>
+                      🐠 Baliqchilik xo‘jaligini tashkil etish va boshqarishni o‘rganasan <br>
+                      💧 Sun’iy hovuzlar va suv muhitini to‘g‘ri tayyorlashni bilib olasan <br>
+                      🌱 Baliq turlari, ularni boqish va parvarishlash texnologiyalarini o‘zlashtirasan <br>
+                      📊 Ozuqa, xarajat va foydani hisoblashni o‘rganasan <br>
+                      🧪 Kasalliklarning oldini olish va mahsulot sifatini nazorat qilishni bilib olasan <br>
+                      Darslar nazariya va amaliyot uyg‘unligida olib boriladi. O‘quvchilar real baliqchilik xo‘jaliklari misolida ishlashadi, zamonaviy texnologiyalar bilan tanishib, mustaqil qaror qabul qilishni o‘rganadilar. <br>
+                      📈 Bitirgach esa: <br>
+                      Baliqchilik xo‘jaligi mutaxassisi <br>
+                      Xususiy baliqchilik xo‘jaligi rahbari <br>
+                      Qishloq xo‘jaligi va suv xo‘jaligi sohasida mutaxassis <br>
+                      yoki o‘z daromadli biznesini boshlash imkoniga ega bo‘lasan <br>
+                      👉 Suvni to‘g‘ri boshqar — baraka o‘zi keladi! <br>
+                      Baliqchilik xo‘jaligini tashkil etish texnologiyasi — bu tabiat va texnologiyani uyg‘unlashtirgan kelajak kasbi <br>
+                    ">
+                    Batafsil ma'lumot
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /Faculties -->
+          </div>
+        </section>
+        <!-- /All Faculties -->
+        <!-- News dashboard -->
+        <section class="vh-auto news-dashboard" id="news-dashboard">
+          <div class="row mx-0">
+            <div class="col-12 text-center">
+              <div class="fw-bold fs-1 mt-5">Yangiliklar va tadbirlar</div>
+            </div>
+          </div>
+          <div class="row d-flex m-0 py-0">
+            <!-- News cards -->
+            <div class="col-12 col-md-4">
+              <div class="news-card">
+                <img
+                  src="/img/news/news1.jpg"
+                  class="img-fluid"
+                  alt="yangilikni iti" />
+                <div class="p-3">
+                  <span class="bg bg-success news-status"> yangi </span>
+                  <div class="news-title">
+                    Kollej rahbariyati yig'ilishda "5 million AI mutaxasis"
+                    loyihasi.
+                  </div>
+                  <p class="news-description">
+                    Texnikumimizda 2-kurs talaba tarafidan yaratilgan AI model
+                    milliy dasturimiz bo'lmish "5 million AI mutaxasisi" ga
+                    qo'shilishga loyiq deb topildi.
+                  </p>
+                </div>
+                <!-- icons -->
+                <div class="p-2">
+                  <div
+                    class="d-flex justify-content-start gap-4 px-0 px-md-3 mt-0">
+                    <p><i class="bi bi-eye-fill"></i> 255</p>
+                    <p><i class="bi bi-calendar-check-fill"></i> 05.02.2026</p>
+                    <div class="rate-container d-flex gap-3">
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
+                        <span class="count fs-4">3</span>
+                      </div>
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
+                        <span class="count fs-4">52</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="news-card">
+                <img
+                  src="/img/news/news3.jpg"
+                  class="img-fluid"
+                  alt="yangilikni iti" />
+                <div class="p-3">
+                  <span class="bg bg-success news-status text-dark">
+                    yangi
+                  </span>
+                  <div class="news-title">
+                    "Eng faol ustoz" tuman ko'rik tanlovida ustozlarimiz.
+                  </div>
+                  <p class="news-description">
+                    Texnikumimizda 2-kurs talaba tarafidan yaratilgan AI model
+                    milliy dasturimiz bo'lmish "5 million AI mutaxasisi" ga
+                    qo'shilishga loyiq deb topildi.
+                  </p>
+                </div>
+                <!-- icons -->
+                <div class="p-2">
+                  <div
+                    class="d-flex justify-content-start gap-4 px-0 px-md-3 mt-0">
+                    <p><i class="bi bi-eye-fill"></i> 255</p>
+                    <p><i class="bi bi-calendar-check-fill"></i> 05.02.2026</p>
+                    <div class="rate-container d-flex gap-3">
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
+                        <span class="count fs-4">12</span>
+                      </div>
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
+                        <span class="count fs-4">21</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="news-card">
+                <img
+                  src="/img/news/news1.jpg"
+                  class="img-fluid"
+                  alt="yangilikni iti" />
+                <div class="p-3">
+                  <span class="bg bg-warning news-status text-dark">
+                    eskiroq
+                  </span>
+                  <div class="news-title">
+                    Kollej rahbariyati yig'ilishda "5 million AI mutaxasis"
+                    loyihasi.
+                  </div>
+                  <p class="news-description">
+                    Texnikumimizda 2-kurs talaba tarafidan yaratilgan AI model
+                    milliy dasturimiz bo'lmish "5 million AI mutaxasisi" ga
+                    qo'shilishga loyiq deb topildi
+                  </p>
+                </div>
+                <!-- icons -->
+                <div class="p-2">
+                  <div
+                    class="d-flex justify-content-start gap-4 px-0 px-md-3 mt-0">
+                    <p><i class="bi bi-eye-fill"></i> 255</p>
+                    <p><i class="bi bi-calendar-check-fill"></i> 05.02.2026</p>
+                    <div class="rate-container d-flex gap-3">
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
+                        <span class="count fs-4">1</span>
+                      </div>
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
+                        <span class="count fs-4">76</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="news-card">
+                <img
+                  src="/img/news/news2.jpg"
+                  class="img-fluid"
+                  alt="yangilikni iti" />
+                <div class="p-3">
+                  <span class="bg bg-warning news-status text-dark"> eskiroq</span>
+                  <div class="news-title">
+                    Yangi yil bayram tadbiridan lavha.
+                  </div>
+                  <p class="news-description">
+                Yangi 2026-yil bayram sifatida texnikumimizda bayramona
+                    kayfiyatda o'tkazildi. Xususan faol qatnashgan talabalarga
+                    direktorimiz tomonidan sovg'alar berildi
+                  </p>
+                </div>
+                <!-- icons -->
+                <div class="p-2">
+                  <div
+                    class="d-flex justify-content-start gap-4 px-0 px-md-3 mt-0">
+                    <p><i class="bi bi-eye-fill"></i> 975</p>
+                    <p><i class="bi bi-calendar-check-fill"></i> 27.12.2025</p>
+                    <div class="rate-container d-flex gap-3">
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
+                        <span class="count fs-4">10</span>
+                      </div>
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
+                        <span class="count fs-4">62</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="news-card">
+                <img
+                  src="/img/news/news2.jpg"
+                  class="img-fluid"
+                  alt="yangilikni iti" />
+                <div class="p-3">
+                  <span class="bg bg-secondary news-status text-dark">
+                    arxiv
+                  </span>
+                  <div class="news-title">Yangi yil tadbiri</div>
+                  <p class="news-description">
+                    Yangi 2025-yil bayram sifatida texnikumimizda bayramona
+                    kayfiyatda o'tkazildi. Xususan faol qatnashgan talabalarga
+                    direktorimiz tomonidan sovg'alar berildi
+                  </p>
+                </div>
+                <!-- icons -->
+                <div class="p-2">
+                  <div
+                    class="d-flex justify-content-start gap-4 px-0 px-md-3 mt-0">
+                    <p><i class="bi bi-eye-fill"></i> 1255</p>
+                    <p><i class="bi bi-calendar-check-fill"></i> 28.12.2024</p>
+                    <div class="rate-container d-flex gap-3">
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
+                        <span class="count fs-4">8</span>
+                      </div>
+                      <div class="rate-box">
+                        <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
+                        <span class="count fs-4">34</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /News dashboard -->
+        <!-- Teachers -->
+        <section class="vh-auto teachers" id="teachers">
+          <div class="row m-0 p-5">
+            <div class="col-12">
+              <div class="fw-bold fs-1 mt-5 text-center">
+                Rahbariyat va Ustozlar
+              </div>
+            </div>
+          </div>
+          <div
+            class="row mx-0 mt-3 ceo-row d-flex justify-content-between position-relative gap-0">
+            <div
+              class="col-12 col-md-3 d-flex justify-content-center p-0 rounded">
+              <div
+                class="card bg bg-dark text-white"
+                style="width: 24rem; height: auto">
+                <img
+                  src="/img/teachers/co-director.png"
+                  class="card-img-top ceo-img"
+                  alt="..." />
+                <div class="p-3">
+                  <h5 class="card-title fs-5 fw-bold">
+                    #Director-O'rinbosari-name
+                  </h5>
+                  <p class="m-0">Director O'rinbosari</p>
+                  <div class="">
+                    <p class="mt-1">Ish vaqti: 09:00 - 18:00</p>
+                    <p class="m-0">
+                      <i class="bi bi-telephone-fill"></i> Telefon:
+                      +998991230000
+                    </p>
+                    <p class="m-0">
+                      <i class="bi bi-send-fill"></i> E-mail:
+                      <a href="#" class="text-decoration-none"
+                        >directoremail@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-3 d-flex justify-content-center p-0 rounded director mt-4">
+              <div
+                class="card bg bg-dark text-white ceo-card"
+                style="width: 24rem; height: auto">
+                <img
+                  src="/img/teachers/director.png"
+                  class="card-img-top ceo-img"
+                  alt="..." />
+                <div class="p-3">
+                  <h5 class="card-title fs-5 fw-bold">#Director-Name</h5>
+                  <p class="m-0">Director</p>
+                  <div class="">
+                    <p class="mt-1">Ish vaqti: 09:00 - 18:00</p>
+                    <p class="m-0">
+                      <i class="bi bi-telephone-fill"></i> Telefon:
+                      +998991230000
+                    </p>
+                    <p class="m-0">
+                      <i class="bi bi-send-fill"></i> E-mail:
+                      <a href="#" class="text-decoration-none"
+                        >directoremail@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-3 d-flex justify-content-center p-0 rounded mt-4">
+              <div
+                class="card bg bg-dark text-white"
+                style="width: 24rem; height: auto">
+                <img
+                  src="/img/teachers/women-co-founder.png"
+                  class="card-img-top ceo-img"
+                  alt="..." />
+                <div class="p-3">
+                  <h5 class="card-title fs-5 fw-bold">
+                    #O'quv-Ishlari-RahbarName
+                  </h5>
+                  <p class="m-0">O'quv ishlari rahbari</p>
+                  <div class="">
+                    <p class="mt-1">Ish vaqti: 09:00 - 18:00</p>
+                    <p class="m-0">
+                      <i class="bi bi-telephone-fill"></i> Telefon:
+                      +998991230000
+                    </p>
+                    <p class="m-0">
+                      <i class="bi bi-send-fill"></i> E-mail:
+                      <a href="#" class="text-decoration-none"
+                        >directoremail@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cards -->
+          <div class="row mx-0 mt-5 teachers-row">
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center p-0">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/teachers/teacher-1.jpg"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Shomuratov Otabek</h5>
+                      <span class="text-success fw-bold">Informatika</span>
+                      <p>
+                        <small
+                          >TATU da tahsil olgan malakali kadr. Malakali ustoz
+                          sifatida bizning texnikumda faoliyat yuritadi.</small
+                        >
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/faculties/avtomobil.jpg"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #2</h5>
+                      <span class="text-success fw-bold">Fan #2</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #3</h5>
+                      <span class="text-success fw-bold">Fan #3</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #4</h5>
+                      <span class="text-success fw-bold">Fan #4</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #5</h5>
+                      <span class="text-success fw-bold">Fan #5</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #6</h5>
+                      <span class="text-success fw-bold">Fan #6</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #7</h5>
+                      <span class="text-success fw-bold">Fan #7</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #8</h5>
+                      <span class="text-success fw-bold">Fan #8</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #9</h5>
+                      <span class="text-success fw-bold">Fan #9</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #10</h5>
+                      <span class="text-success fw-bold">Fan #10</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #11</h5>
+                      <span class="text-success fw-bold">Fan #11</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #12</h5>
+                      <span class="text-success fw-bold">Fan #12</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #13</h5>
+                      <span class="text-success fw-bold">Fan #13</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+              <div class="card mb-3" style="max-width: 560px">
+                <div class="row g-0">
+                  <div class="col-12 col-md-3 p-0 p-md-2 d-flex">
+                    <img
+                      src="/img/profile-person.png"
+                      class="img-fluid img-person"
+                      alt="..." />
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title m-0 fw-bold">Ustoz #14</h5>
+                      <span class="text-success fw-bold">Fan #14</span>
+                      <p class="card-text">
+                        <small>#ustoz-haqida-text</small>
+                      </p>
+                      <div class="p-0">
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          >+998 99 454 49 41</a
+                        >
+                        <a
+                          href="#"
+                          class="text-decoration-none btn btn-outline-primary"
+                          ><i class="bi bi-telegram"></i> Telegramdan yozish</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /Teachers -->
+        <!-- Bog'lanish kontaktlari -->
+        <section class="vh-auto contact-us p-0" id="contact-us">
+          <div class="row mx-0 d-flex justify-content-center w-100">
+            <div class="col-12 text-center fw-bold fs-1 mt-5">Bog'lanish</div>
+            <div class="col-12 mt-5 contacts">
+              <div class="row m-0 w-100">
+                <!-- Contacts -->
+                <div class="col-12 col-md-6 contact-group">
+                  <div class="fw-bolder fs-1">Biz bilan bog'laning</div>
+                  <div class="d-flex">
+                    <b class="fs-4"
+                      ><i class="bi bi-telephone-fill"></i> Aloqa telefoni:</b
+                    >
+                    <a href="#" class="m-2 text-decoration-none fw-bold"
+                      >+998 99 454 49 41</a
+                    >
+                  </div>
+                  <div class="d-flex">
+                    <b class="fs-4"
+                      ><i class="bi bi-envelope-at-fill"></i> E-mail:</b
+                    >
+                    <a href="#" class="m-2">amudaryotexnikum1@gmail.com</a>
+                  </div>
+                  <div class="d-flex">
+                    <b class="fs-4"
+                      ><i class="bi bi-geo-alt-fill"></i> Joylashuv:</b
+                    >
+                    <p class="m-2 text-primary fw-bold">
+                      Amudaryo tumani, Qipchoq
+                    </p>
+                  </div>
+                  <div class="fs-3">Biz ijtimoiy tarmoqlarda:</div>
+                  <div class="d-flex fs-1 w-100 gap-2">
+                    <a href="#" class="text-decoration-none">
+                      <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="bi bi-youtube text-danger"></i>
+                    </a>
+                    <a href="#">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end p-0">
+                  <!-- Map -->
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.8931305671645!2d60.092657126793675!3d42.212860461696835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41ddfb00024885d5%3A0x954391dc15fa266!2sAmudaryo%201-son%20KHM!5e0!3m2!1sen!2s!4v1770966670264!5m2!1sen!2s"
+                    class="map"
+                    style="border: 0"
+                    allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- Form -->
+          </div>
+          <div class="row m-0 w-100 d-flex justify-content-between p-5">
+            <div class="col-12 col-md-4 bg bg-primary contact-form px-0 mt-5">
+              <form action="#" class="p-0" id="form">
+                <label for="comment" class="form-label fw-bold fs-4 p-2">
+                  Fikr-mulohaza yozish
+                  <i class="bi bi-chat-quote-fill text-white"></i
+                ></label>
+                <textarea
+                  rows="8"
+                  cols="10"
+                  name="comment"
+                  id="comment-area"
+                  placeholder="Biz haqimizda fikringiz qanday?"></textarea>
+                <div
+                  class="w-100 d-flex bg bg-light justify-content-around buttons">
+                  <button
+                    class="btn btn-outline-danger fw-bolder border-2 py-2 px-5 form-btn hide"
+                    id="clear-btn">
+                    <i class="bi bi-trash3-fill"></i> Tozalash
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-outline-success fw-bolder border-2 py-2 px-5 form-btn hide"
+                    id="send-btn">
+                    <i class="bi bi-send-fill"></i> Yuborish
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-12 col-md-6 p-0 mt-5">
+              <h2 class="p-5 fw-bold fs-1">
+                Sizning fikrlaringiz biz uchun muhim va ta'lim sifatini yanada
+                yaxshilash uchun xizmat qiladi.
+              </h2>
+            </div>
+          </div>
+        </section>
+        <!-- /Bog'lanish kontaktlari -->
+      </main>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="moreInfoModal"
+        tabindex="-1"
+        aria-labelledby="modalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg bg-dark text-white">
+            <!-- more info for card -->
+            <div class="more-info">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="modal-title fs-4 fw-bold p-2" id="modalTitle"></div>
+                <span
+                  class="mx-2 bg bg-danger text-white py-1 px-4 rounded"
+                  data-bs-dismiss="modal"
+                  ><i class="bi bi-x-lg fs-4 fw-bold"></i
+                ></span>
+              </div>
+              <img class="modal-img" />
+              <p class="modal-description p-3"></p>
+              <div class="p-2">
+                <button class="btn btn-primary w-100 application-btn">
+                  Ariza qoldirish
+                </button>
+              </div>
+            </div>
+            <!-- /more info for card -->
+            <!-- submit an application -->
+            <div class="py-2 px-3 application hide">
+              <h2>Murojaat formasi</h2>
+              <p class="form-info">
+                <i class="bi bi-info-circle text-white"></i>
+                Ism familya va telefon raqamingizni yuboring va biz qabul uchun
+                qayta aloqaga chiqamiz.
+              </p>
+              <form action="#" class="application-form">
+                <div class="form-floating mb-3">
+                  <input
+                    name="name"
+                    autocomplete="off"
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com" />
+                  <label for="floatingInput">Ismingiz</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    name="surname"
+                    autocomplete="off"
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com" />
+                  <label for="floatingInput">Familyangiz:</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    name="phone-number"
+                    autocomplete="off"
+                    type="number"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com" />
+                  <label for="floatingInput">Telefon raqamingiz</label>
+                </div>
+                <div class="w-100 d-flex gap-2 justify-content-between">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                    id="close-application">
+                    Bekor qilish
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    id="send-button"
+                    type="submit">
+                    Yuborish
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="w-100 vh-auto bg bg-dark text-white text-center p-5">
+        <p class="fs-2 footer-description">
+          Amudaryo 1-sonli texnikumi rasmiy saytiga tashrif buyurganingiz uchun
+          tashakkur!.
+        </p>
+        <p>&copy; 2026 Barcha huquqlar himoyalangan!</p>
+      </footer>
+      <!-- /Footer -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/like-counter.js"></script>
+    <script src="/js/api.js"></script>
+  </body>
+</html>

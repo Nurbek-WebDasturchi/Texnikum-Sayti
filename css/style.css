@@ -1,0 +1,539 @@
+/* Advanced */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:focus,
+button:active,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* deepseek code */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+}
+
+.faculty-card,
+.news-card {
+  height: auto;
+  margin-bottom: 20px;
+}
+button,
+a {
+  min-height: 44px;
+  min-width: 44px;
+}
+/* /deepseek code */
+.c {
+  border: 2px solid red;
+}
+.hide {
+  display: none;
+}
+/* scroll style */
+/* Scroll bar o'zi */
+::-webkit-scrollbar {
+  width: 12px; /* gorizontal/vertical scroll width */
+  height: 12px; /* gorizontal scroll height */
+}
+
+/* Scroll track (orqa fon) */
+::-webkit-scrollbar-track {
+  background: #c8dfea; /* track rangi */
+  border-radius: 10px; /* track burchaklari yumaloq */
+}
+
+/* Scroll thumb (harakatlanuvchi qism) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* thumb rangi */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* track bilan joylashishni yaxshilash */
+}
+
+/* Hover qilganda thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* /scroll style */
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* /Advanced */
+body {
+  scroll-behavior: smooth;
+}
+/* Navbar */
+nav {
+  width: 100%;
+  z-index: 20;
+}
+
+@media (min-width: 576px) {
+  /* gpt */
+  .nav-link {
+    font-size: 0.95rem; /* 18px o‘rniga rem – responsive */
+    font-weight: 500;
+    color: #e5e7eb; /* soft white (ko‘zni charchatmaydi) */
+    text-transform: uppercase;
+    letter-spacing: 0.5px; /* premium feel */
+    margin: 0 14px;
+    position: relative;
+    transition: color 0.25s ease;
+  }
+
+  /* Hover rang */
+  .nav-link:hover {
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  /* Underline animatsiya */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #4f46e5; /* brand rang (xohlasang o‘zgartirasan) */
+    transition: width 0.25s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Active link */
+  .nav-link.active {
+    color: #ffffff;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+  /* /gpt */
+}
+/* animatsiyada GPT tog'a yordam berdi */
+#main-btn {
+  position: relative;
+  border: none;
+  background: linear-gradient(135deg, rgb(42, 42, 253), rgb(90, 90, 255));
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 15px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  z-index: 1;
+
+  transition: transform 0.25s ease; /* hover animatsiya */
+}
+
+/* glow pulsatsiya */
+#main-btn::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #5f5fff, #2a2aff, #7a7aff);
+  filter: blur(14px);
+  z-index: -1;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+}
+
+/* 👉 hoverda glow to‘xtaydi */
+#main-btn:hover::before {
+  animation: none;
+  opacity: 1; /* muzlab qolgan glow */
+}
+
+/* 👉 faqat kattalashadi */
+#main-btn:hover {
+  transform: scale(1.08);
+}
+
+/* bosilganda */
+#main-btn:active {
+  transform: scale(0.96);
+}
+/* /animatsiyada GPT tog'a yordam berdi */
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert-close {
+  background: inherit;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* /Main section */
+/* Faculties section */
+.faculties,
+.news-dashboard,
+.teachers,
+.contact-us {
+  background-color: #c8dfea;
+  width: 100%;
+}
+.faculty-card {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 550px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.faculty-card:hover {
+  animation: movingUp 0.5s infinite ease-in-out alternate;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+@keyframes movingUp {
+  20% {
+    transform: translateY(-1px);
+  }
+  40% {
+    transform: translateY(-2px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.faculty-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 300px;
+  width: 100%;
+}
+.faculty-info {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  padding: 10px;
+}
+.faculty-card button {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+}
+
+/* /Faculties section */
+/* News dashboard */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  background-color: rgb(51, 51, 53);
+  border-radius: 10px;
+  color: #c8dfea;
+  height: 550px;
+  margin-top: 20px;
+}
+.news-card img {
+  border-radius: 10px 10px 0 0;
+  height: 250px;
+  width: 100%;
+}
+.news-status {
+  width: 25%;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+}
+.news-title {
+  font-size: 24px;
+  color: rgb(246, 246, 253);
+  font-weight: bold;
+}
+/* /News dashboard */
+/* Teachers */
+.img-person {
+  width: auto;
+  height: 150px;
+  border-radius: 50%;
+}
+.ceo-img {
+  height: 20rem;
+}
+.teachers-row .card {
+  background-color:#212121;
+  color:white;
+}
+.teachers-row a {
+  margin-top:10px ;
+}
+/* /Teachers */
+/* Bog'lanish kontaktlari */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.contact-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map {
+  width: 600px;
+  max-width: 600px;
+  height: 500px;
+  border-radius: 20px;
+}
+.contact-form {
+  height: 73%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+textarea {
+  resize: none;
+  outline: none;
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+}
+.buttons {
+  z-index: 19;
+  padding: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* /Bog'lanish kontaktlari */
+/* Modal */
+/* content - more info */
+.modal-img {
+  height: 300px;
+  width: 100%;
+}
+.modal-description {
+  height: 250px;
+  /* border: 2px solid green; */
+  overflow-y: scroll;
+}
+/* /content - more info */
+/* content - send application form */
+.form-info {
+  color: rgb(3, 249, 69);
+}
+.application-form label {
+  font-weight: 600;
+  color: rgb(7, 1, 1);
+}
+/* /content - send application form */
+/* /Modal */
+/* Footer */
+.footer-description {
+  color: bisque;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+}
+/* desktop responsive */
+@media (min-width: 992px) {
+  /* header */
+  .logo {
+  width: 300px;
+  display: flex;
+  position: relative;
+}
+.logo span {
+  font-size: 10px;
+  position: absolute;
+  padding-left: 2px !important;
+  top: 30px;
+  left: 40px;
+  color: rgb(117, 100, 248);
+  letter-spacing: 1px;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+/* Main section */
+.main-section {
+  height: 90.5vh;
+  background-image: url("/img/main-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main-row {
+  width: 50%;
+}
+.main-row button {
+  width: 50%;
+}
+.intro-text {
+  font-size: 72px;
+}
+/* news */
+.rate-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+.rate-box i {
+  position: absolute;
+  top: 5px;
+}
+.count {
+  position: absolute;
+  right: -6px;
+  top: -3px;
+}
+/* teachers */
+  .director {
+    position: relative;
+    top: -70px;
+  }
+  .main-section, .ceo-row,.news-dashboard, .faculties {
+    padding: 48px;
+  }
+  .ceo-card {
+    width: 26rem;
+    height: auto;
+  }
+  .teachers-row {
+padding:30px;
+  }
+  .img-person {
+        border:2px solid rgb(18, 18, 19);
+  }
+}
+/* Mobil uchun vh-100 ni o'zgartirish */
+@media (max-width: 768px) {
+  /* header */
+    .logo {
+  width: 200px;
+  display: flex;
+  position: relative;
+}
+.logo span {
+  font-size: 10px;
+  position: absolute;
+  padding-left: 2px !important;
+  top: 30px;
+  left: 40px;
+  color: rgb(117, 100, 248);
+  letter-spacing: 1px;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+/* main */
+  .main-section {
+      background-color: #c8dfea;
+      height: 100vh;
+  }
+  .intro-text {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .main-row {
+  width: 100%;
+}
+.main-row .button-box, .main-row
+ button {
+  width: 100%;
+}
+/* news */
+.rate-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+.rate-box i {
+  position: absolute;
+  top: 5px;
+  /* margin:0 5px 0 5px; */
+}
+.count {
+  position: absolute;
+  right: -16px;
+  top: -3px;
+}
+/* teachers */
+  .teachers,
+  .contact-us {
+    min-height: auto;
+    height: auto;
+    padding: 20px 0;
+  }
+    .ceo-row, .teachers-row ,.news-row {
+    padding: 18px;
+  }
+   .ceo-card {
+    width: 32rem;
+    height: auto;
+  }
+  .img-person {
+    width: 100%;
+    height: 300px;
+    border-radius: 0.375rem 0.375rem 0 0;
+  }
+}
