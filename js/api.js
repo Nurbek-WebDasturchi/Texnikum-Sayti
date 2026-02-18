@@ -145,6 +145,15 @@ window.addEventListener("DOMContentLoaded", () => {
           .then((data) => {
             console.log("Javob:", data);
             closeBtn.click();
+            alertMsg.innerHTML = `
+        <div class="alert alert-success alert-dismissible fade show alert-content" role="alert">
+          <strong>Forma yuborildi!</strong>
+        </div>
+        `;
+        document.querySelector('.button-box').append(alertMsg);
+        setTimeout(() => {
+          alertMsg.remove();
+        }, 5000);
           })
           .catch((err) => {
             console.error("Xatolik:", err);
