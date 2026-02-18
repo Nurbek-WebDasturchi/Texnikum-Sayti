@@ -1,4 +1,15 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // chrome extension
+      chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+      if (request.action === "getData") {
+        fetch('https://api.example.com/data')
+          .then(response => response.json())
+          .then(data => sendResponse({ data: data }))
+          .catch(error => sendResponse({ error: error.message }));
+        return true; // Important: Indicates that sendResponse will be called asynchronously.
+      }
+    });
+    // chrome extension
   const textArea = document.querySelector("textarea"),
     buttonsParent = document.querySelector(".buttons"),
     buttonEl = document.querySelectorAll(".form-btn");
