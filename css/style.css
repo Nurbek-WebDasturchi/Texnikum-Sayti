@@ -83,52 +83,6 @@ nav {
   width: 100%;
   z-index: 20;
 }
-
-@media (min-width: 576px) {
-  /* gpt */
-  .nav-link {
-    font-size: 0.95rem; /* 18px o‘rniga rem – responsive */
-    font-weight: 500;
-    color: #e5e7eb; /* soft white (ko‘zni charchatmaydi) */
-    text-transform: uppercase;
-    letter-spacing: 0.5px; /* premium feel */
-    margin: 0 14px;
-    position: relative;
-    transition: color 0.25s ease;
-  }
-
-  /* Hover rang */
-  .nav-link:hover {
-    color: #ffffff;
-    overflow: hidden;
-  }
-
-  /* Underline animatsiya */
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: #4f46e5; /* brand rang (xohlasang o‘zgartirasan) */
-    transition: width 0.25s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  /* Active link */
-  .nav-link.active {
-    color: #ffffff;
-  }
-
-  .nav-link.active::after {
-    width: 100%;
-  }
-  /* /gpt */
-}
 /* animatsiyada GPT tog'a yordam berdi */
 #main-btn {
   position: relative;
@@ -387,6 +341,52 @@ textarea {
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 1px;
 }
+/* small devices */
+@media (min-width: 992px) {
+  /* gpt */
+  .nav-link {
+    font-size: 0.95rem; /* 18px o‘rniga rem – responsive */
+    font-weight: 500;
+    color: #e5e7eb; /* soft white (ko‘zni charchatmaydi) */
+    text-transform: uppercase;
+    letter-spacing: 0.5px; /* premium feel */
+    margin: 0 14px;
+    position: relative;
+    transition: color 0.25s ease;
+  }
+
+  /* Hover rang */
+  .nav-link:hover {
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  /* Underline animatsiya */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #4f46e5; /* brand rang (xohlasang o‘zgartirasan) */
+    transition: width 0.25s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Active link */
+  .nav-link.active {
+    color: #ffffff;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+  /* /gpt */
+}
 /* desktop responsive */
 @media (min-width: 992px) {
   /* header */
@@ -443,10 +443,6 @@ textarea {
   top: -3px;
 }
 /* teachers */
-  .director {
-    position: relative;
-    top: -70px;
-  }
   .main-section, .ceo-row,.news-dashboard, .faculties {
     padding: 48px;
   }
@@ -462,7 +458,14 @@ padding:30px;
   }
 }
 /* Mobil uchun vh-100 ni o'zgartirish */
-@media (max-width: 768px) {
+@media (min-width:991px) and (hover: hover) {
+    .director {
+    position: relative;
+    top: -70px;
+    
+  }
+}
+@media (min-width: 300px) and (max-width: 991px)  {
   /* header */
     .logo {
   width: 200px;
@@ -498,6 +501,10 @@ padding:30px;
 .main-row .button-box, .main-row
  button {
   width: 100%;
+}
+/* faculties */
+.faculty-card p {
+  overflow-y: auto;
 }
 /* news */
 .rate-box {
@@ -542,3 +549,4 @@ padding:30px;
     flex-direction: column;
   }
 }
+
