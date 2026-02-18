@@ -8,7 +8,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form"),
     textArea = document.querySelector("#comment-area"),
     commentBotToken = "7983159904:AAHWS_xpPALZcmppP3wAMHMKFFrYoWW7fhs",
-    id = "6401123819";
+    chat_id_dev = "6401123819",
+    chat_id_teacher = "706682784";
   // ===== Enter bosilganda form submit qilish =====
   textArea.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !event.shiftKey) {
@@ -24,7 +25,31 @@ window.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chat_id: id,
+          chat_id: chat_id_dev,
+          text: `Foydalanuvchi fikri: "${message}"`,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.ok) {
+            textArea.value = "";
+          } else {
+            alert(`Nimadir xato ketdi, qaytadan urinib ko'ring.`);
+          }
+        })
+        .catch((error) => {
+          console.log("Nimadir xato ketdi", error);
+          alert("Nimadir xato ketdi.");
+        })
+        .finally(() => {
+          console.log("API ishlayaptiku hech bolmaganda.");
+        });
+      // bro id
+      fetch(`https://api.telegram.org/bot${commentBotToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chat_id_teacher,
           text: `Foydalanuvchi fikri: "${message}"`,
         }),
       })
@@ -67,10 +92,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // API TOKENS
   const adminstrationBotToken =
     "8512933150:AAEwzX_WZ1GQSu0F6e_bGJZSbr3w_G4WYvU";
-  const chat_id_dev = "6401123819";
-  const chat_id_admin = "";
-  const chat_id_teacher = "";
-
   // API SUBMIT
   sendRequestForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -94,6 +115,28 @@ window.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify({
               chat_id: chat_id_dev,
+              text: dataInputs,
+            }),
+          },
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("Javob:", data);
+            closeBtn.click();
+          })
+          .catch((err) => {
+            console.error("Xatolik:", err);
+          });
+        // bro id
+        fetch(
+          `https://api.telegram.org/bot${adminstrationBotToken}/sendMessage`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: chat_id_teacher,
               text: dataInputs,
             }),
           },
