@@ -536,4 +536,9 @@ padding:30px;
     height: 300px;
     border-radius: 0.375rem 0.375rem 0 0;
   }
+  /* contact us */
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+  }
 }
