@@ -100,67 +100,80 @@ window.addEventListener("DOMContentLoaded", () => {
       userSurname = formData.get("surname"),
       userPhoneNumber = formData.get("phone-number");
     const values = [userName, userSurname, userPhoneNumber];
-    const dataInputs = `ISM:${userName},
-    FAMILYA: ${userSurname},
+    const dataInputs = `FAMILYA:${userSurname},
+    ISM: ${userName},
     TELEFON: ${userPhoneNumber}
     `;
     if (values.some((value) => value.trim() !== "")) {
       if (userName !== "" && userSurname !== "" && userPhoneNumber !== "") {
-        fetch(
-          `https://api.telegram.org/bot${adminstrationBotToken}/sendMessage`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
+        if (!/^\d{9}$/.test(userPhoneNumber)) {
+          alertMsg.innerHTML = `
+        <div class="alert alert-warning alert-dismissible fade show alert-content" role="alert">
+          <strong>Telefon raqami 9ta raqamdan iborat bo'lishi kerak, Iltimos kiritgan raqamni tekshirib ko'ring. Biror raqamni ortiqcha yoki kam terib yubormadingizmi?</strong>
+        </div>
+        `;
+          parentEl.append(alertMsg);
+          setTimeout(() => {
+            alertMsg.remove();
+          }, 5000);
+          return; // yoki e.preventDefault()
+        } else {
+          fetch(
+            `https://api.telegram.org/bot${adminstrationBotToken}/sendMessage`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                chat_id: chat_id_dev,
+                text: dataInputs,
+              }),
             },
-            body: JSON.stringify({
-              chat_id: chat_id_dev,
-              text: dataInputs,
-            }),
-          },
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            console.log("Javob:", data);
-            closeBtn.click();
-          })
-          .catch((err) => {
-            console.error("Xatolik:", err);
-          });
-        // bro id
-        fetch(
-          `https://api.telegram.org/bot${adminstrationBotToken}/sendMessage`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("Javob:", data);
+              closeBtn.click();
+            })
+            .catch((err) => {
+              console.error("Xatolik:", err);
+            });
+          // bro id
+          fetch(
+            `https://api.telegram.org/bot${adminstrationBotToken}/sendMessage`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                chat_id: chat_id_teacher,
+                text: dataInputs,
+              }),
             },
-            body: JSON.stringify({
-              chat_id: chat_id_teacher,
-              text: dataInputs,
-            }),
-          },
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            console.log("Javob:", data);
-            closeBtn.click();
-            alertMsg.innerHTML = `
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("Javob:", data);
+              closeBtn.click();
+              alertMsg.innerHTML = `
         <div class="alert alert-success alert-dismissible fade show alert-content" role="alert">
           <strong>Forma yuborildi!</strong>
         </div>
         `;
-        document.querySelector('.button-box').append(alertMsg);
-        setTimeout(() => {
-          alertMsg.remove();
-        }, 5000);
-          })
-          .catch((err) => {
-            console.error("Xatolik:", err);
-          });
+              document.querySelector(".button-box").append(alertMsg);
+              setTimeout(() => {
+                alertMsg.remove();
+              }, 5000);
+            })
+            .catch((err) => {
+              console.error("Xatolik:", err);
+            });
+        }
       } else {
         alertMsg.innerHTML = `
-        <div class="alert alert-warning alert-dismissible fade show alert-content" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show alert-content" role="alert">
           <strong>Hurmatli foydalanuvchi, formani to'liq to'ldiring</strong>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -172,8 +185,8 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     } else {
       alertMsg.innerHTML = `
-        <div class="alert alert-warning alert-dismissible fade show alert-content" role="alert">
-          <strong>Hurmatli foydalanuvchi, siz formani to'ldirmadingiz hali!.</strong>
+        <div class="alert alert-danger alert-dismissible fade show alert-content" role="alert">
+          <strong>Hurmatli foydalanuvchi, siz hali formani to'ldirmadingiz!.</strong>
           <button type="button" class="alert-close" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x-circle"></i></button>
         </div>
         `;
