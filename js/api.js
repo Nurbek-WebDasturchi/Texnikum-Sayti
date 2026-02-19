@@ -57,6 +57,15 @@ window.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
           if (data.ok) {
             textArea.value = "";
+            alertMsg.innerHTML = `
+        <div class="alert alert-success alert-dismissible fade show alert-content" role="alert">
+          <strong>Fikr yuborildi!</strong>
+        </div>
+        `;
+            document.querySelector(".contact-form").append(alertMsg);
+            setTimeout(() => {
+              alertMsg.remove();
+            }, 5000);
           } else {
             alert(`Nimadir xato ketdi, qaytadan urinib ko'ring.`);
           }
