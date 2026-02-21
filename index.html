@@ -79,7 +79,8 @@
               Oliy ta'limga yo'l <br />
               bizning 1-sonli texnikumimizdan boshlanadi
             </h2>
-            <div class="button-box d-flex align-items-center flex-column align-items-md-start ">
+            <div
+              class="button-box d-flex align-items-center flex-column align-items-md-start">
               <button
                 type="button"
                 data-bs-toggle="modal"
@@ -1392,7 +1393,9 @@
                   class="card-img-top ceo-img"
                   alt="..." />
                 <div class="p-3">
-                  <h5 class="card-title fs-5 fw-bold">Xalmuratov Jasur Murotovich</h5>
+                  <h5 class="card-title fs-5 fw-bold">
+                    Xalmuratov Jasur Murotovich
+                  </h5>
                   <p class="m-0">Director</p>
                   <div class="">
                     <p class="mt-1">Ish vaqti: 09:00 - 18:00</p>
@@ -1938,8 +1941,8 @@
                     <b class="fs-5 fs-lg-4"
                       ><i class="bi bi-telephone-fill"></i> Aloqa telefoni:</b
                     >
-                    <a href="#" class="m-2 text-decoration-none fw-bold"
-                      >+998 99 454 49 41</a
+                    <a href="tel:+998973570887" class="m-2 text-decoration-none fw-bold"
+                      >+998973570887</a
                     >
                   </div>
                   <div class="d-flex contact-box">
@@ -1953,7 +1956,7 @@
                       ><i class="bi bi-geo-alt-fill"></i> Joylashuv:</b
                     >
                     <p class="m-2 text-primary fw-bold">
-                      Amudaryo tumani, Qipchoq
+                      Qipchoq SHFY Olchazor ko'chasi 27-uy, Amudaryo tuman 1-son texnikumi
                     </p>
                   </div>
                   <div class="fs-5 fs-lg-3">Biz ijtimoiy tarmoqlarda:</div>
@@ -1969,7 +1972,8 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-12 col-lg-6 d-flex justify-content-end p-3 p-lg-0">
+                <div
+                  class="col-12 col-lg-6 d-flex justify-content-end p-3 p-lg-0">
                   <!-- Map -->
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.8931305671645!2d60.092657126793675!3d42.212860461696835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41ddfb00024885d5%3A0x954391dc15fa266!2sAmudaryo%201-son%20KHM!5e0!3m2!1sen!2s!4v1770966670264!5m2!1sen!2s"
@@ -2085,8 +2089,8 @@
                     type="number"
                     class="form-control"
                     id="floatingInput"
-                    placeholder="name@example.com" 
-                    value="+998 "/>
+                    placeholder="name@example.com"
+                    value="+998 " />
                   <label for="floatingInput">Telefon raqamingiz</label>
                 </div>
                 <div class="w-100 d-flex gap-2 justify-content-between">
@@ -2126,5 +2130,39 @@
     <script src="/js/scripts.js"></script>
     <script src="/js/like-counter.js"></script>
     <script src="/js/api.js"></script>
+    <!-- POST DATABASE --><!--need continue-->
+     <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCxQzDzaRJ-9UruapEZq-rIlF7LWW3fEFw",
+    authDomain: "sonli-texnikum.firebaseapp.com",
+    projectId: "sonli-texnikum",
+    storageBucket: "sonli-texnikum.firebasestorage.app",
+    messagingSenderId: "217523792842",
+    appId: "1:217523792842:web:bdd2aef2bb7407dcdd3d33",
+    measurementId: "G-QPMFZ3C5KV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<!-- Firebase App (core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+
+<!-- Firebase services, masalan Firestore, Auth, Analytics -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"></script>
+<script>
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+</script>
   </body>
 </html>

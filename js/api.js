@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".contact-form").append(alertMsg);
             setTimeout(() => {
               alertMsg.remove();
-            }, 5000);
+            }, 3000);
           } else {
             alert(`Nimadir xato ketdi, qaytadan urinib ko'ring.`);
           }
@@ -124,7 +124,7 @@ window.addEventListener("DOMContentLoaded", () => {
           parentEl.append(alertMsg);
           setTimeout(() => {
             alertMsg.remove();
-          }, 5000);
+          }, 7000);
           return; // yoki e.preventDefault()
         } else {
           fetch(
