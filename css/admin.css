@@ -45,6 +45,7 @@ form {
 }
 .input-admin {
   border: 2px solid #08cb00 !important;
+  color: white !important;
 }
 @media (min-width: 767px) {
   form {
