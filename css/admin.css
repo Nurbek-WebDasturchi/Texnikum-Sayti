@@ -39,6 +39,13 @@ form {
   border-radius: 10px;
   padding: 30px 8px 10px 8px;
 }
+.label-admin {
+  color: #08cb00 !important;
+  outline: none !important;
+}
+.input-admin {
+  border: 2px solid #08cb00 !important;
+}
 @media (min-width: 767px) {
   form {
     width: 30%;
