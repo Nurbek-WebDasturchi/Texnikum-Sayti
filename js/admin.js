@@ -8,13 +8,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const { data } = await supabase.auth.getUser();
 
     if (!data.user) {
-      window.location.href = "/pages/login.html";
+      window.location.href = "/login.html";
     }
   }
   checkUser();
   async function logOut() {
     await supabase.auth.signOut();
-    window.location.href = "/pages/login.html";
+    window.location.href = "/login.html";
   }
   logOutBtn.addEventListener("click", () => {
     logOut();
