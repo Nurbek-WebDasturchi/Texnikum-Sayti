@@ -9,6 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (!data.user) {
       window.location.href = "/login.html";
+    } else {
+      document.body.style.display = "block";
     }
   }
   checkUser();
