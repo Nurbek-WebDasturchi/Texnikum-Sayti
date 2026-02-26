@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
       window.location.href = "/admin.html";
     }
   }
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault(); // forma submitini to‘xtatadi
     login();
   });
