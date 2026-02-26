@@ -15,30 +15,46 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/admin.css" />
   </head>
-  <body class="vh-100 p-0">
-    <div class="container-fluid p-0 b">
-      <div class="row m-0 h-100 d-flex">
+  <body class="vh-100 p-0 bg bg-dark">
+    <div class="container-fluid p-0 h-100 gap-0">
+      <div class="row m-0 p-0">
         <div class="col-12 p-0">
-          <h1 class="admin-logo bg bg-dark text-white p-2 m-0">Admin panel</h1>
+          <h1 class="admin-logo background m-0 py-2 px-3">
+            Admin panel
+            <img src="/icons/un-lock.svg" class="icon" alt="ss" />
+          </h1>
         </div>
-        <div class="col-4 d-flex flex-column p-0 border border-dark">
-          <div>
-            <h2 class="bg bg-success w-100 p-2">Navigatorlar</h2>
-          </div>
-          <div class="p-2 d-flex flex-column gap-1">
-            <button class="btn btn-dark text-white p-2">Yangilanishlar</button>
-            <button class="btn btn-dark text-white p-2">Sayt haqida</button>
-            <button class="btn btn-dark text-white p-2">
-              Dasturiy ta'minot
-            </button>
-            <button class="btn btn-dark text-white p-2">Bog'lanish</button>
-            <button class="btn btn-danger text-white p-2 log-out">
-              Tizimdan chiqish
-            </button>
+      </div>
+      <div class="row m-0 main-row">
+        <div class="col-3 black-border">
+          <h2 class="color-text">Navigators</h2>
+          <div class="d-flex flex-column gap-2">
+            <button class="btn btn-primary">Post qo'yish</button>
+            <button class="btn btn-primary">Yangilanishlar</button>
+            <button class="btn btn-primary">Dasturiy ta'minot</button>
+            <button class="btn btn-primary">Sayt haqida</button>
+            <button class="btn btn-primary">Statistika</button>
+            <button class="btn btn-danger log-out">Tizimdan chiqish</button>
           </div>
         </div>
-        <div class="col-8" style="height: 758px">
-          <div>Bu yerda post qo'shish mumkin!</div>
+        <div class="col-9 black-border">
+          <h2 class="text-center mt-5 text-white">
+            Xush kelibsiz,
+            <span class="hello text-primary fw-bold"></span>
+          </h2>
+          <h5 class="text-center fw-bold color-text">
+            Siz bu panelda post qo'shish va Statistika ni tahlil qilishingiz
+            mumkin. Shuningdek chapdagi bo'limlar bilan tanishib chiqishingizni
+            tavsiya etaman.
+          </h5>
+          <div class="d-flex justify-content-center flex-column">
+            <img src="/img/admin-main.jpg" alt="s" class="img-admin" />
+            <p class="text-white fw-bold mt-2 text-center">
+              Adminstrator bu butun bir xavfsizlik masuliyatini olgan ishonchli
+              xodim hisoblanadi va saytdagi kontentlarni tahrirlaydi va yangi
+              kontent qo'sha oladi.
+            </p>
+          </div>
         </div>
       </div>
     </div>

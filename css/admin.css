@@ -6,3 +6,25 @@
 .b {
   border: 2px solid blue;
 }
+
+.background {
+  background-color: #08cb00;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-weight: bold;
+}
+.icon {
+  height: 40px;
+  width: auto;
+}
+.main-row {
+  height: 92.2%;
+}
+.color-text {
+  color: #08cb00;
+}
+.img-admin {
+  height: 500px;
+  width: auto;
+  border-radius: 10px;
+}
