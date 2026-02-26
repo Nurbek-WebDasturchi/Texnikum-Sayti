@@ -15,25 +15,33 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/admin.css" />
   </head>
-  <body>
-    <div class="container-fluid vh-100 p-0">
-      <div class="row mx-0 h-100">
+  <body class="vh-100 p-0">
+    <div class="container-fluid p-0 b">
+      <div class="row m-0 h-100 d-flex">
         <div class="col-12 p-0">
-          <h1 class="admin-logo bg bg-dark text-white p-2">Admin panel</h1>
+          <h1 class="admin-logo bg bg-dark text-white p-2 m-0">Admin panel</h1>
         </div>
-        <div class="col-4 d-flex flex-column gap-1 h-100 b">
-          <h2 class="bg bg-success w-100">Navigatorlar</h2>
-          <button class="btn btn-dark text-white p-2">Yangilanishlar</button>
-          <button class="btn btn-dark text-white p-2">Sayt haqida</button>
-          <button class="btn btn-dark text-white p-2">Dasturiy ta'minot</button>
-          <button class="btn btn-dark text-white p-2">Bog'lanish</button>
-          <button class="btn btn-danger text-white p-2">
-            Tizimdan chiqish
-          </button>
+        <div class="col-4 d-flex flex-column p-0 border border-dark">
+          <div>
+            <h2 class="bg bg-success w-100 p-2">Navigatorlar</h2>
+          </div>
+          <div class="p-2 d-flex flex-column gap-1">
+            <button class="btn btn-dark text-white p-2">Yangilanishlar</button>
+            <button class="btn btn-dark text-white p-2">Sayt haqida</button>
+            <button class="btn btn-dark text-white p-2">
+              Dasturiy ta'minot
+            </button>
+            <button class="btn btn-dark text-white p-2">Bog'lanish</button>
+            <button class="btn btn-danger text-white p-2 log-out">
+              Tizimdan chiqish
+            </button>
+          </div>
+        </div>
+        <div class="col-8" style="height: 758px">
+          <div>Bu yerda post qo'shish mumkin!</div>
         </div>
       </div>
     </div>
-    <button class="log-out">Logout</button>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- <script src="/js/admin.js"></script> -->
