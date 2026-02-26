@@ -4,8 +4,9 @@ window.addEventListener("DOMContentLoaded", () => {
     "sb_publishable_0zerQRBHSQl0i29KO7oKGw_Uq3bOjXz",
   );
 
-  const btn = document.querySelector(".login-btn");
-  async function login() {
+  document.querySelector(".login-btn").addEventListener("click", async (e) => {
+    e.preventDefault();
+
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -16,12 +17,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (error) {
       alert("Login xato");
-    } else {
-      window.location.href = "/admin.html";
+      return;
     }
-  }
-  btn.addEventListener("click", (e) => {
-    e.preventDefault(); // forma submitini to‘xtatadi
-    login();
+
+    // session saqlanishi uchun ozgina kutamiz
+    setTimeout(() => {
+      window.location.href = "/admin.html";
+    }, 300);
   });
 });
