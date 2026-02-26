@@ -17,10 +17,11 @@ window.addEventListener("DOMContentLoaded", () => {
     if (error) {
       alert("Login xato");
     } else {
-      window.location.href = "/admin";
+      window.location.href = "/admin.html";
     }
   }
   btn.addEventListener("click", () => {
+    e.preventDefault(); // forma submitini to‘xtatadi
     login();
   });
 });
