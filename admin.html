@@ -47,7 +47,7 @@
             mumkin. Shuningdek chapdagi bo'limlar bilan tanishib chiqishingizni
             tavsiya etaman.
           </h5>
-          <div class="d-flex justify-content-center flex-column">
+          <div class="d-flex justify-content-center flex-column hide">
             <img src="/img/admin-main.jpg" alt="s" class="img-admin" />
             <p class="text-white fw-bold mt-2 text-center">
               Adminstrator bu butun bir xavfsizlik masuliyatini olgan ishonchli
@@ -55,15 +55,140 @@
               kontent qo'sha oladi.
             </p>
           </div>
+
+          <!-- POST -->
+          <h1>Admin Panel - Yangilik Qo'shish</h1>
+
+          <form id="post-form" class="mb-5">
+            <input
+              type="text"
+              id="title"
+              placeholder="Sarlavha"
+              class="form-control mb-3"
+              required />
+            <textarea
+              id="description"
+              placeholder="Description"
+              class="form-control mb-3"
+              required></textarea>
+            <input
+              type="file"
+              id="image"
+              accept="image/*"
+              class="form-control mb-3"
+              required />
+            <button type="submit" class="btn btn-primary">Post qo'shish</button>
+          </form>
         </div>
       </div>
     </div>
-
+    <!-- admin.html: pastki skriptlar -->
+    <!-- Supabase JS (global) - bitta nusxa sahifaga qo'ying -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Admin auth va UI boshqaruvi (yuqoridagi js/admin.js faylini yuklang) -->
     <script src="/js/admin.js"></script>
+
+    <!-- Bootstrap va boshqa skriptlar -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+
+    <!-- POST handler: module skript — BU YERDA YANGI client YARATMAYDI, window.supabaseClient dan foydalanadi -->
+    <script type="module">
+      const supabase = window.supabaseClient;
+      if (!supabase) {
+        console.error(
+          "supabaseClient topilmadi. '/js/admin.js' sahifada to'g'ri yuklanganligini tekshiring.",
+        );
+      }
+
+      const form = document.getElementById("post-form");
+      if (!form) {
+        console.warn("post-form topilmadi.");
+      } else {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const title = document.getElementById("title").value.trim();
+          const description = document
+            .getElementById("description")
+            .value.trim();
+          const imageFile = document.getElementById("image").files[0];
+
+          if (!title || !description) {
+            return alert("Sarlavha va description to'ldiring.");
+          }
+          if (!imageFile) {
+            return alert("Rasm tanlang!");
+          }
+
+          // Foydalanuvchini to'g'ri olish
+          const { data: { user } = {} } = await supabase.auth.getUser();
+          console.log("user:", user);
+          if (!user) return alert("Avval tizimga kiring!");
+
+          // Rasm fayl nomi local scope ichida e'lon qilinadi (fileName xatosi bunday yo'qolmaydi)
+          const fileExt = imageFile.name.split(".").pop();
+          const fileName = `${Date.now()}.${fileExt}`;
+
+          // Yuklash
+          const uploadResult = await supabase.storage
+            .from("posts-images")
+            .upload(fileName, imageFile);
+          console.log("uploadResult:", uploadResult);
+          if (uploadResult.error) {
+            return alert(
+              "Rasm yuklashda xatolik: " + uploadResult.error.message,
+            );
+          }
+
+          // Public URL olish (agar bucket public bo'lsa)
+          const { data: { publicUrl } = {} } = supabase.storage
+            .from("posts-images")
+            .getPublicUrl(fileName);
+          console.log("publicUrl:", publicUrl);
+
+          let imageUrl = publicUrl;
+          if (!imageUrl) {
+            // bucket private bo'lsa signed URL yaratish
+            const { data: signedData, error: signedErr } =
+              await supabase.storage
+                .from("posts-images")
+                .createSignedUrl(fileName, 60 * 60);
+            console.log("signedData:", signedData, "signedErr:", signedErr);
+            if (signedErr) {
+              return alert(
+                "Signed URL yaratishda xatolik: " + signedErr.message,
+              );
+            }
+            imageUrl = signedData.signedUrl;
+          }
+
+          // Insert payload — hamma kerakli maydonlar scope ichida e'lon qilingan
+          const insertPayload = {
+            title,
+            description,
+            image_url: imageUrl,
+            user_id: user.id,
+          };
+          console.log("Insert payload:", insertPayload);
+
+          const { data, error: postError } = await supabase
+            .from("posts")
+            .insert([insertPayload]);
+          console.log("Insert result:", { data, postError });
+
+          if (postError) {
+            alert("Rasm yuklashda xatolik: " + postError.message);
+          } else {
+            alert("Post muvaffaqiyatli qo'shildi!");
+            form.reset();
+          }
+        });
+      }
+    </script>
+    <script src="/js/admin-post.js"></script>
   </body>
 </html>

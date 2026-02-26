@@ -7,22 +7,28 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".login-btn").addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
-    const { error } = await supabase.auth.signInWithPassword({
+    if (!email || !password) {
+      alert("Email va parolni kiriting.");
+      return;
+    }
+
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
     if (error) {
-      alert("Login xato");
+      alert("Login xato: " + error.message);
       return;
     }
 
-    // session saqlanishi uchun ozgina kutamiz
-    setTimeout(() => {
-      window.location.href = "/admin.html";
-    }, 300);
+    // Agar kerak bo'lsa sessiyani yana tekshirish:
+    // await supabase.auth.getSession();
+
+    // Redirect immediately
+    window.location.href = "/admin.html";
   });
 });
