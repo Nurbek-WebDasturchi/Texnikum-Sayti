@@ -70,9 +70,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
+/* input[type="number"] {
   -moz-appearance: textfield;
-}
+} */
 
 /* /Advanced */
 body {
@@ -426,6 +426,9 @@ textarea {
   font-size: 72px;
 }
 /* news */
+.carousel-item img {
+  background-position:center !important;
+}
 .rate-box {
   position: relative;
   display: flex;
