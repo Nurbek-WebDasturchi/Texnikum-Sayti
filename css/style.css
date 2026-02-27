@@ -257,6 +257,7 @@ nav {
 .teachers-row .card {
   background-color:#212121;
   color:white;
+  width: 100%;
 }
 .teachers-row a {
   margin-top:10px ;
