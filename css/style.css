@@ -493,12 +493,42 @@ padding:30px;
 }
 /* main */
   .main-section {
-      background-color: #c8dfea;
-      height: 100vh;
+  background-image: url("/img/bg-mobile.jpg");
+  background-position: center;
+  background-size: cover;    
+  height: 100vh;
   }
   .intro-text {
-    font-size: 2.8rem;
-    text-align: center;
+animation:introAnimate ease-in-out 5s infinite;    text-align: center;
+    position: relative;
+    top: -150px;
+  font-weight: 700;
+  /* sky gradient */
+  background: linear-gradient(90deg, #1a1c1c, #081d27, #2d8e99);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+text-shadow:
+    0 0 9px rgba(42, 46, 48, 0.6),
+    0 0 9px rgba(56, 189, 248, 0.35);
+  } @keyframes introAnimate {
+    0%{
+    font-size: 2.82rem;
+    }
+    25% {
+          font-size: 2.84rem;
+    }
+        50% {
+          font-size: 2.86rem;
+    }    75% {
+          font-size: 2.88rem;
+    }    100% {
+          font-size: 3rem;
+    }
+  }
+  .apply-button {
+    position: relative;
+    bottom:-255px;
   }
   .main-row {
   width: 100%;
