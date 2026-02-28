@@ -255,12 +255,12 @@ nav {
   height: 20rem;
 }
 .teachers-row .card {
-  background-color:#212121;
-  color:white;
+  background-color: #212121;
+  color: white;
   width: 100%;
 }
 .teachers-row a {
-  margin-top:10px ;
+  margin-top: 10px;
 }
 /* /Teachers */
 /* Bog'lanish kontaktlari */
@@ -392,63 +392,66 @@ textarea {
 @media (min-width: 992px) {
   /* header */
   .logo {
-  width: 300px;
-  display: flex;
-  position: relative;
-}
-.logo span {
-  font-size: 10px;
-  position: absolute;
-  padding-left: 2px !important;
-  top: 30px;
-  left: 40px;
-  color: rgb(117, 100, 248);
-  letter-spacing: 1px;
-}
-.logo-img {
-  height: 40px;
-  width: auto;
-  border-radius: 50%;
-}
-/* Main section */
-.main-section {
-  height: 90.5vh;
-  background-image: url("/img/main-bg.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.main-row {
-  width: 50%;
-}
-.main-row button {
-  width: 50%;
-}
-.intro-text {
-  font-size: 72px;
-}
-/* news */
-.carousel-item img {
-  background-position:center !important;
-}
-.rate-box {
-  position: relative;
-  display: flex;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-}
-.rate-icon {
-  position: absolute;
-  top: 5px;
-}
-.count {
-  position: absolute;
-  right: 6px;
-  top: -3px;
-}
-/* teachers */
-  .main-section, .ceo-row,.news-dashboard, .faculties {
+    width: 300px;
+    display: flex;
+    position: relative;
+  }
+  .logo span {
+    font-size: 10px;
+    position: absolute;
+    padding-left: 2px !important;
+    top: 30px;
+    left: 40px;
+    color: rgb(117, 100, 248);
+    letter-spacing: 1px;
+  }
+  .logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+  }
+  /* Main section */
+  .main-section {
+    height: 100vh;
+    background-image: url("/img/main-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .main-row {
+    width: 50%;
+  }
+  .main-row button {
+    width: 50%;
+  }
+  .intro-text {
+    font-size: 72px;
+  }
+  /* news */
+  .carousel-item img {
+    background-position: center !important;
+  }
+  .rate-box {
+    position: relative;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+  .rate-icon {
+    position: absolute;
+    top: 5px;
+  }
+  .count {
+    position: absolute;
+    right: 6px;
+    top: -3px;
+  }
+  /* teachers */
+  .main-section,
+  .ceo-row,
+  .news-dashboard,
+  .faculties {
     padding: 48px;
   }
   .ceo-card {
@@ -456,120 +459,112 @@ textarea {
     height: auto;
   }
   .teachers-row {
-padding:30px;
+    padding: 30px;
   }
   .img-person {
-        border:2px solid rgb(18, 18, 19);
+    border: 2px solid rgb(18, 18, 19);
+  }
+}
+@media (min-width: 991px) and (hover: hover) {
+  .director {
+    position: relative;
+    top: -70px;
   }
 }
 /* Mobil uchun vh-100 ni o'zgartirish */
-@media (min-width:991px) and (hover: hover) {
-    .director {
-    position: relative;
-    top: -70px;
-    
-  }
-}
-@media (min-width: 300px) and (max-width: 991px)  {
+@media (min-width: 300px) and (max-width: 991px) {
   /* header */
-    .logo {
-  width: 200px;
-  display: flex;
-  position: relative;
-}
-.logo span {
-  font-size: 10px;
-  position: absolute;
-  padding-left: 2px !important;
-  top: 30px;
-  left: 40px;
-  color: rgb(117, 100, 248);
-  letter-spacing: 1px;
-}
-.logo-img {
-  height: 40px;
-  width: auto;
-  border-radius: 50%;
-}
-/* main */
+  .logo {
+    width: 200px;
+    display: flex;
+    position: relative;
+  }
+  .logo span {
+    font-size: 10px;
+    position: absolute;
+    padding-left: 2px !important;
+    top: 30px;
+    left: 40px;
+    color: rgb(117, 100, 248);
+    letter-spacing: 1px;
+  }
+  .logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+  }
+  /* main */
   .main-section {
-  background-image: url("/img/bg-mobile.jpg");
-  background-position: center;
-  background-size: cover;    
-  height: 100vh;
+    /* Mobil uchun vh-100 ni o'zgartirish */
+    background-color: #c8dfea;
+    background-image: url("/img/bg-mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
   .intro-text {
-animation:introAnimate ease-in-out 5s infinite;    text-align: center;
-    position: relative;
-    top: -150px;
-  font-weight: 700;
-  /* sky gradient */
-  background: linear-gradient(90deg, #1a1c1c, #081d27, #2d8e99);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-text-shadow:
-    0 0 9px rgba(42, 46, 48, 0.6),
-    0 0 9px rgba(56, 189, 248, 0.35);
-  } @keyframes introAnimate {
-    0%{
-    font-size: 2.82rem;
-    }
-    25% {
-          font-size: 2.84rem;
-    }
-        50% {
-          font-size: 2.86rem;
-    }    75% {
-          font-size: 2.88rem;
-    }    100% {
-          font-size: 3rem;
-    }
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #081d27;
+    /* margin-top: 6rem; */
+    width: auto;
+    max-width: 100%;
   }
-  .apply-button {
+  .button-box {
+    margin-top: 20rem;
     position: relative;
-    bottom:-180px;
+    top: 8rem;
+  }
+  .apply-info {
+    padding: 10px;
+    text-align: center;
+    color: #0a0000;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
   .main-row {
-  width: 100%;
-}
-.main-row .button-box, .main-row
- button {
-  width: 100%;
-}
-/* faculties */
-.faculty-card p {
-  overflow-y: auto;
-}
-/* news */
-.rate-box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-}
-.rate-box i {
-  position: absolute;
-  top: 5px;
-  /* margin:0 5px 0 5px; */
-}
-.count {
-  position: absolute;
-  right: -16px;
-  top: -3px;
-}
-/* teachers */
+    width: 100%;
+  }
+  .main-row .button-box,
+  .main-row button {
+    width: 100%;
+  }
+  /* faculties */
+  .faculty-card p {
+    overflow-y: auto;
+  }
+  /* news */
+  .rate-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+  }
+  .rate-box i {
+    position: absolute;
+    top: 5px;
+    /* margin:0 5px 0 5px; */
+  }
+  .count {
+    position: absolute;
+    right: -16px;
+    top: -3px;
+  }
+  /* teachers */
   .teachers,
   .contact-us {
     min-height: auto;
     height: auto;
     padding: 20px 0;
   }
-    .ceo-row, .teachers-row ,.news-row {
+  .ceo-row,
+  .teachers-row,
+  .news-row {
     padding: 18px;
   }
-   .ceo-card {
+  .ceo-card {
     width: 32rem;
     height: auto;
   }
@@ -584,4 +579,3 @@ text-shadow:
     flex-direction: column;
   }
 }
-
