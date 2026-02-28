@@ -495,7 +495,6 @@ textarea {
   }
   /* main */
   .main-section {
-    /* Mobil uchun vh-100 ni o'zgartirish */
     background-color: #c8dfea;
     background-image: url("/img/bg-mobile.jpg");
     background-size: contain;
@@ -512,9 +511,10 @@ textarea {
     max-width: 100%;
   }
   .button-box {
-    margin-top: 20rem;
+    height: 50vh;
+    padding: 16px;
     position: relative;
-    top: 8rem;
+    bottom: -8rem;
   }
   .apply-info {
     padding: 10px;
