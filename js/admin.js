@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // Session olish va role tekshirish
   const { data: { session } = {} } = await supabase.auth.getSession();
+  console.log(`mana: ${session}`);
   if (!session) {
     window.location.replace("/login.html");
     return;

@@ -85,10 +85,8 @@
     <!-- admin.html: pastki skriptlar -->
     <!-- Supabase JS (global) - bitta nusxa sahifaga qo'ying -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <!-- Admin auth va UI boshqaruvi (yuqoridagi js/admin.js faylini yuklang) -->
     <script src="/js/admin.js"></script>
-
     <!-- Bootstrap va boshqa skriptlar -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -97,20 +95,23 @@
 
     <!-- POST handler: module skript — BU YERDA YANGI client YARATMAYDI, window.supabaseClient dan foydalanadi -->
     <script type="module">
+      // 🔹 Supabase clientni olish
       const supabase = window.supabaseClient;
+
       if (!supabase) {
         console.error(
-          "supabaseClient topilmadi. '/js/admin.js' sahifada to'g'ri yuklanganligini tekshiring.",
+          "supabaseClient topilmadi. admin.js oldin yuklanganini tekshiring.",
         );
+        throw new Error("Supabase client yo‘q");
       }
 
       const form = document.getElementById("post-form");
-      if (!form) {
-        console.warn("post-form topilmadi.");
-      } else {
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
 
+      form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        try {
+          // 🔹 form qiymatlari
           const title = document.getElementById("title").value.trim();
           const description = document
             .getElementById("description")
@@ -118,77 +119,71 @@
           const imageFile = document.getElementById("image").files[0];
 
           if (!title || !description) {
-            return alert("Sarlavha va description to'ldiring.");
+            alert("Sarlavha va description to‘ldiring");
+            return;
           }
           if (!imageFile) {
-            return alert("Rasm tanlang!");
+            alert("Rasm tanlang");
+            return;
           }
 
-          // Foydalanuvchini to'g'ri olish
-          const { data: { user } = {} } = await supabase.auth.getUser();
-          console.log("user:", user);
-          if (!user) return alert("Avval tizimga kiring!");
+          // 🔹 user olish
+          const {
+            data: { user },
+            error: userError,
+          } = await supabase.auth.getUser();
 
-          // Rasm fayl nomi local scope ichida e'lon qilinadi (fileName xatosi bunday yo'qolmaydi)
+          if (userError || !user) {
+            alert("Avval login qiling");
+            return;
+          }
+
+          // 🔹 fayl nomi
           const fileExt = imageFile.name.split(".").pop();
           const fileName = `${Date.now()}.${fileExt}`;
 
-          // Yuklash
-          const uploadResult = await supabase.storage
+          // 🔹 storage upload
+          const { error: uploadError } = await supabase.storage
             .from("posts-images")
             .upload(fileName, imageFile);
-          console.log("uploadResult:", uploadResult);
-          if (uploadResult.error) {
-            return alert(
-              "Rasm yuklashda xatolik: " + uploadResult.error.message,
-            );
+
+          if (uploadError) {
+            alert("Rasm yuklashda xato: " + uploadError.message);
+            return;
           }
 
-          // Public URL olish (agar bucket public bo'lsa)
-          const { data: { publicUrl } = {} } = supabase.storage
+          // 🔹 public url
+          const { data } = supabase.storage
             .from("posts-images")
             .getPublicUrl(fileName);
-          console.log("publicUrl:", publicUrl);
 
-          let imageUrl = publicUrl;
-          if (!imageUrl) {
-            // bucket private bo'lsa signed URL yaratish
-            const { data: signedData, error: signedErr } =
-              await supabase.storage
-                .from("posts-images")
-                .createSignedUrl(fileName, 60 * 60);
-            console.log("signedData:", signedData, "signedErr:", signedErr);
-            if (signedErr) {
-              return alert(
-                "Signed URL yaratishda xatolik: " + signedErr.message,
-              );
-            }
-            imageUrl = signedData.signedUrl;
+          const imageUrl = data.publicUrl;
+
+          // 🔹 insert
+          const { error: insertError } = await supabase.from("posts").insert([
+            {
+              title,
+              description,
+              image_url: imageUrl,
+              user_id: user.id,
+            },
+          ]);
+
+          if (insertError) {
+            alert("Post qo‘shishda xato: " + insertError.message);
+            return;
           }
 
-          // Insert payload — hamma kerakli maydonlar scope ichida e'lon qilingan
-          const insertPayload = {
-            title,
-            description,
-            image_url: imageUrl,
-            user_id: user.id,
-          };
-          console.log("Insert payload:", insertPayload);
-
-          const { data, error: postError } = await supabase
-            .from("posts")
-            .insert([insertPayload]);
-          console.log("Insert result:", { data, postError });
-
-          if (postError) {
-            alert("Rasm yuklashda xatolik: " + postError.message);
-          } else {
-            alert("Post muvaffaqiyatli qo'shildi!");
-            form.reset();
-          }
-        });
-      }
+          alert("Post qo‘shildi ✅");
+          form.reset();
+        } catch (err) {
+          console.error(err);
+          alert("Kutilmagan xatolik");
+        }
+      });
     </script>
+    ```
+
     <script src="/js/admin-post.js"></script>
   </body>
 </html>
