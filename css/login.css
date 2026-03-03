@@ -10,7 +10,7 @@
   border: 2px solid #08cb00;
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 .back {
   position: absolute;

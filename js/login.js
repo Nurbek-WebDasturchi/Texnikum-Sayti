@@ -3,15 +3,18 @@ window.addEventListener("DOMContentLoaded", () => {
     "https://cqbmntbuekxmllunrade.supabase.co",
     "sb_publishable_0zerQRBHSQl0i29KO7oKGw_Uq3bOjXz",
   );
-
+  const wrapper = document.querySelector(".loader");
   document.querySelector(".login-btn").addEventListener("click", async (e) => {
     e.preventDefault();
-    document.querySelector(".loader").classList.remove("hide");
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-
+    if (email || password) {
+      wrapper.classList.remove("hide");
+    }
     if (!email || !password) {
       alert("Email va parolni kiriting.");
+      wrapper.classList.add("hide");
+
       return;
     }
 
