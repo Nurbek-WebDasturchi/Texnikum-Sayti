@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".login-btn").addEventListener("click", async (e) => {
     e.preventDefault();
-
+    document.querySelector(".loader").classList.remove("hide");
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
