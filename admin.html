@@ -27,27 +27,34 @@
       </div>
       <div class="row m-0 main-row">
         <div class="col-3 black-border">
-          <h2 class="color-text">Navigators</h2>
+          <h2 class="color-text">Bo'limlar</h2>
           <div class="d-flex flex-column gap-2">
-            <button class="btn btn-primary">Post qo'yish</button>
-            <button class="btn btn-primary">Yangilanishlar</button>
-            <button class="btn btn-primary">Dasturiy ta'minot</button>
-            <button class="btn btn-primary">Sayt haqida</button>
-            <button class="btn btn-primary">Statistika</button>
+            <button class="btn btn-primary" id="btn-post">Post yaratish</button>
+            <button class="btn btn-primary" id="btn-updates">
+              Yangilanishlar
+            </button>
+            <button class="btn btn-primary" id="btn-software">
+              Dasturiy ta'minot
+            </button>
+            <button class="btn btn-primary" id="btn-about">Sayt haqida</button>
+            <button class="btn btn-primary" id="btn-statistics">
+              Statistika
+            </button>
             <button class="btn btn-danger log-out">Tizimdan chiqish</button>
           </div>
         </div>
         <div class="col-9 black-border">
           <h2 class="text-center mt-5 text-white">
-            Xush kelibsiz,
+            Xush kelibsiz Admin
             <span class="hello text-primary fw-bold"></span>
           </h2>
           <h5 class="text-center fw-bold color-text">
-            Siz bu panelda post qo'shish va Statistika ni tahlil qilishingiz
-            mumkin. Shuningdek chapdagi bo'limlar bilan tanishib chiqishingizni
-            tavsiya etaman.
+            Siz bu panelda hech qanday kod yozmasdan saytga post joylay olasiz
+            va saytdagi dasturiy yangilanishlar haqida xabardor bo'lib
+            turishingiz mumkin.
           </h5>
-          <div class="d-flex justify-content-center flex-column hide">
+          <!-- intro -->
+          <div class="d-flex justify-content-center flex-column" id="intro">
             <img src="/img/admin-main.jpg" alt="s" class="img-admin" />
             <p class="text-white fw-bold mt-2 text-center">
               Adminstrator bu butun bir xavfsizlik masuliyatini olgan ishonchli
@@ -57,28 +64,205 @@
           </div>
 
           <!-- POST -->
-          <h1>Admin Panel - Yangilik Qo'shish</h1>
-
-          <form id="post-form" class="mb-5">
-            <input
-              type="text"
-              id="title"
-              placeholder="Sarlavha"
-              class="form-control mb-3"
-              required />
-            <textarea
-              id="description"
-              placeholder="Description"
-              class="form-control mb-3"
-              required></textarea>
-            <input
-              type="file"
-              id="image"
-              accept="image/*"
-              class="form-control mb-3"
-              required />
-            <button type="submit" class="btn btn-primary">Post qo'shish</button>
-          </form>
+          <div class="hide" id="post">
+            <h3>Admin Panel - Yangilik Qo'shish</h3>
+            <div class="fs-2 text-white">Post yaratish</div>
+            <div class="line"></div>
+            <form id="post-form" class="mb-5 mt-3">
+              <input
+                type="text"
+                id="title"
+                placeholder="Sarlavha"
+                class="form-control mb-3"
+                required />
+              <textarea
+                id="description"
+                placeholder="Post matni"
+                class="form-control mb-3"
+                required></textarea>
+              <p class="color-text">
+                Rasm tanlash uchun "Choose File" tugmasini bosing
+              </p>
+              <input
+                type="file"
+                id="image"
+                accept="image/*"
+                class="form-control mb-3 bg bg-secondary"
+                required />
+              <button type="submit" class="btn btn-primary">
+                Post qo'shish
+              </button>
+            </form>
+          </div>
+          <!-- Yangilanishlar -->
+          <div class="p-2 hide" id="updates">
+            <h3 class="text-white border border-success rounded p-2">
+              Yangilanishlar
+            </h3>
+            <div class="cards">
+              <div class="card border border-success">
+                <div class="card-header update">
+                  <span class="fw-bold">Xabar</span>
+                  <span class="date">3-mart, 2026-yil, 21:42 </span>
+                </div>
+                <div class="card-body bg bg-dark">
+                  <p class="color-text">
+                    Yangilanishni yakuni sifatida men admin panelida qoshimcha
+                    narsalar qo'shdim dizayni boyicha o'zgarishlarni qildim.
+                    Sababi dasturchi nima qilayotganini bu yangilanish bo'limi
+                    orqali admin bilib o'tirishini xohladim. Admin parol logini
+                    hozirda 3ta inson uchun kirish belgilangan!
+                  </p>
+                </div>
+              </div>
+              <div class="card border border-success">
+                <div class="card-header update">
+                  <span class="fw-bold">Muvvafaqiyatli yangilandi</span>
+                  <span class="date">3-mart, 2026-yil, 18:38</span>
+                </div>
+                <div class="card-body bg bg-dark">
+                  <p class="color-text">
+                    Avvaldan bor bo'lgan postlar bilan bazadan keladigani
+                    ikkalasini bir biri bilan bog'ladim.
+                  </p>
+                </div>
+              </div>
+              <div class="card border border-success">
+                <div class="card-header update">
+                  <span class="fw-bold">Muvvafaqiyatli yangilandi</span>
+                  <span class="date">3-mart, 2026-yil, 9:35 </span>
+                </div>
+                <div class="card-body bg bg-dark">
+                  <p class="color-text">
+                    SQL yaxshi ishlayotgan edi ammo men like/dislike tugmalari
+                    boyicha xatolikga yo'l qo'ydim. Muommo chatGPT yordamida 5
+                    soat da hal qilindi va saytga joriy etildi.😁
+                  </p>
+                </div>
+              </div>
+              <div class="card border border-success">
+                <div class="card-header update">
+                  <span class="fw-bold">Muvvafaqiyatli yangilandi</span>
+                  <span class="date">2-mart, 2026-yil, 23:45</span>
+                </div>
+                <div class="card-body bg bg-dark">
+                  <p class="color-text">
+                    Saytning hamma korinadigan qismiga postlar serverdan olib
+                    kelina boshlandi admin panel ham yaxshi ishlayotgan edi ammo
+                    noto'g'ri strukuture butun kodni buzdi men esa uni 1soat
+                    o'ylanib o'tirdim keyin tuzata olmay uxladim. yangilanish
+                    post olib kelinishi edi.
+                  </p>
+                </div>
+              </div>
+              <div class="card border border-success">
+                <div class="card-header update">
+                  <span class="fw-bold">Muvvafaqiyatli yangilandi</span>
+                  <span class="date">2-mart, 2026-yil, 09:22</span>
+                </div>
+                <div class="card-body bg bg-dark">
+                  <p class="color-text">
+                    Saytdagi postlar endi SQL Bazasidan olib kelinadi va juda
+                    tezkorlashtirildi. Men 3 kundan beri hal qila olmayotgan
+                    xatolikni tuzatdim va SQL da baza shakllantirildi. Muommo
+                    rasm yuklashda edi endi u hal!.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- software -->
+          <div class="container text-white hide" id="software">
+            <div class="row">
+              <div class="col-12 p-5">
+                <div class="fs-2">Dasturiy ta'minot</div>
+                <div class="line"></div>
+                <div class="software mt-3 p-3">
+                  <h4>
+                    Dasturiy ta'minot boshlanishiga Frontend bilan cheklanmoqchi
+                    edi ammo men unga kuchli server va backend keyinchalik
+                    yakunda admin boshqaruvini ham qo'shishga qaror qildim.
+                    Buning hammasi texnikumimizning avtomatlashtirilgan Dasturiy
+                    Tizimini shaklantiradi.
+                  </h4>
+                  <div class="color-text fs-4 fw-bold">
+                    Ishlatilgan texnologiyalar
+                  </div>
+                  <div class="d-flex">
+                    <img src="/img/stack.jpg" alt="ss" class="img-fluid" />
+                    <img src="/img/postgresql.jpg" alt="ss" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- about -->
+          <div class="container text-white hide" id="about">
+            <div class="row">
+              <div class="col-12 p-5">
+                <div class="fs-2">Sayt haqida</div>
+                <div class="line"></div>
+                <div class="info mt-3 p-3">
+                  <h4>
+                    Sayt ishlab chiqilishi 05.02.2026 da boshlanib 15.02.2026 da
+                    yakunlandi ammo taqdimoti 27.02.2026 da bo'lib o'tdi sababi
+                    saytga real ma'lumotlar kiritish va uni yig'ish juda ko'p
+                    vaqtni talab qildi ammo hammasini tahlashga erishdik. Agar
+                    shunday kuchli tizimlashtirilgan sayt kerak bo'lsa
+                    <a
+                      href="https://t.me/N_2984"
+                      target="_blank"
+                      class="text-decoration-none"
+                      >dasturchiga</a
+                    >
+                    murojaat qilishingiz mumkin.
+                  </h4>
+                  <span class="text-secondary"
+                    >03.03.2026 da nashr qilindi.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- statistics -->
+          <div class="container text-white hide" id="statistics">
+            <div class="row">
+              <div class="col-12 p-5">
+                <div class="fs-2">Statistika</div>
+                <div class="line"></div>
+                <div class="statistics mt-3 p-3">
+                  <h4>
+                    www.1-kht.uz ishga tushgandan beri foydalanuvchilar soni
+                    kuniga 20dan ziyod oshish kuzatilmoqda.
+                  </h4>
+                  <div class="row mx-0 d-flex justify-content-between py-5">
+                    <div class="col-3 custom-border">
+                      <div class="text-primary fw-bold fs-5">
+                        Tashrif buyuruvchilar
+                      </div>
+                      <p class="number">23</p>
+                    </div>
+                    <div class="col-3 custom-border">
+                      <div class="text-primary fw-bold fs-5">
+                        Ariza yuborganlar
+                      </div>
+                      <p class="number">35</p>
+                    </div>
+                    <div class="col-3 custom-border">
+                      <div class="text-primary fw-bold fs-5">
+                        Comment qoldirganlar
+                      </div>
+                      <p class="number">3</p>
+                    </div>
+                  </div>
+                  <h5 class="text-secondary">
+                    Ushbu statistika kunlik statistika asosida tez-tezdan
+                    yangilanib turadi
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -185,5 +369,6 @@
     ```
 
     <script src="/js/admin-post.js"></script>
+    <script src="/js/admin-ui.js"></script>
   </body>
 </html>

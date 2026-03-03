@@ -6,7 +6,9 @@
 .b {
   border: 2px solid blue;
 }
-
+body {
+  overflow-y: hidden;
+}
 .background {
   background-color: #08cb00;
   font-family: "Courier New", Courier, monospace;
@@ -30,4 +32,49 @@
 }
 .hide {
   display: none !important;
+}
+
+.cards {
+  /* border: 2px solid rgb(0, 255, 51); */
+  overflow-y: auto;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(52, 55, 52);
+}
+.cards::-webkit-scrollbar-button {
+  display: none;
+}
+.update {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(119, 156, 135);
+}
+.date {
+  font-family: monospace;
+}
+.line {
+  border: 3px solid #08cb00;
+}
+.software,
+.custom-border {
+  border: 3px solid rgb(211, 209, 204);
+  border-radius: 20px;
+}
+.software img {
+  height: 320px;
+  width: 50%;
+}
+.software {
+  height: 480px;
+}
+.info {
+  height: 180px;
+}
+.number {
+  font-size: 42px;
+  font-weight: 700;
 }
