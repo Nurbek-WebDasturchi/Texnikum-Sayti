@@ -442,9 +442,38 @@ textarea {
     position: absolute;
     top: 5px;
   }
+  .view {
+    width: 100px;
+  }
+  .date {
+    width: 390px;
+  }
+  .date-desktop {
+    width: 290px;
+  }
+  .view-desktop {
+    display: flex;
+  }
+  .server-dislike {
+    position: absolute;
+    left: -1px;
+  }
+  .server-like {
+    left: -1px;
+  }
   .count {
     position: absolute;
     right: 6px;
+    top: -3px;
+  }
+  .like-count {
+    position: absolute;
+    top: -4px !important;
+    right: 45px;
+  }
+  .dislike-count {
+    position: absolute;
+    right: 16px;
     top: -3px;
   }
   /* teachers */
@@ -543,14 +572,33 @@ textarea {
     align-items: center;
     width: 60px;
   }
-  .rate-box i {
+  .rate-icon {
     position: absolute;
     top: 5px;
-    /* margin:0 5px 0 5px; */
+  }
+  .server-dislike {
+    position: absolute;
+    right: -2px;
+  }
+  .server-like {
+    top: 0.5px;
+  }
+  .like-count {
+    position: absolute;
+    right: -16px;
+    top: -3px;
   }
   .count {
     position: absolute;
     right: -16px;
+    top: -3px;
+  }
+  .count-local {
+    right: -4px;
+  }
+  .dislike-count {
+    position: absolute;
+    right: -18px;
     top: -3px;
   }
   /* teachers */
