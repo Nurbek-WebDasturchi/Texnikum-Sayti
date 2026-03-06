@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  const role = session.user.user_metadata?.role;
+  const role = session.user.app_metadata?.role;
   if (role !== "admin") {
     alert("Sizda admin ruxsat yo‘q");
     window.location.replace("/");
