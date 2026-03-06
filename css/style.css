@@ -244,6 +244,10 @@ nav {
   color: rgb(246, 246, 253);
   font-weight: bold;
 }
+.text-overflow-custom {
+  overflow-y: auto;
+}
+
 /* /News dashboard */
 /* Teachers */
 .img-person {

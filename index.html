@@ -1152,131 +1152,10 @@
             <div class="col-12 text-center">
               <div class="fw-bold fs-1 mt-5">Yangiliklar va tadbirlar</div>
             </div>
-            <div class="row flex-row-reverse d-flex m-0 py-0" id="posts-container"></div>
-            <div class="row d-flex m-0 py-0">
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="news-card">
-                  <img
-                    src="/img/news/post3.jpg"
-                    class="post-image"
-                    alt="site is hacked" />
-                  <div class="p-3">
-                    <span class="bg bg-success news-status"> yangi </span>
-                    <div class="news-title">Sumalak sayli</div>
-                    <p class="news-description">
-                      Amudaryo tuman 1-son texnikumida sumalak sayli oʻtkazildi.
-                      Saylda oʻqituvchi va oʻquvchilar faol qatnashdi.
-                    </p>
-                  </div>
-                  <!-- icons -->
-                  <div class="p-2">
-                    <div
-                      class="d-flex justify-content-start gap-3 px-0 px-md-3 mt-0">
-                      <p><i class="bi bi-eye-fill"></i> 78</p>
-                      <p>
-                        <i class="bi bi-calendar-check-fill"></i> 26-02-2026
-                      </p>
-                      <div
-                        class="rate-container d-flex gap-3"
-                        data-post-id="static-1">
-                        <div class="rate-box">
-                          <i
-                            class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
-                          <span class="count fs-4 count-local">2</span>
-                        </div>
-                        <div class="rate-box">
-                          <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
-                          <span class="count fs-4">52</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="news-card">
-                  <img
-                    src="/img/news/post-1.jpg"
-                    class="post-image"
-                    alt="site is hacked" />
+            <div
+              class="row  d-flex m-0 py-0"
+              id="posts-container"></div>
 
-                  <div class="p-3">
-                    <span class="bg bg-success news-status"> yangi </span>
-                    <div class="news-title">Zakovat</div>
-                    <p class="news-description">
-                      O'ZXDP tomonidan tashkil etilgan "Zakovat" intelektual
-                      tanlovi tashkil etildi. Tanlovda Amudaryo tuman 1-son
-                      texnikumi oʻqituvchi yoshlari faxrli 2 oʻrinni egalladi.
-                    </p>
-                  </div>
-                  <!-- icons -->
-                  <div class="p-2">
-                    <div
-                      class="d-flex justify-content-start gap-3 px-0 px-md-3 mt-0">
-                      <p><i class="bi bi-eye-fill"></i> 68</p>
-                      <p>
-                        <i class="bi bi-calendar-check-fill"></i> 26-02-2026
-                      </p>
-                      <div
-                        class="rate-container d-flex gap-3"
-                        data-post-id="static-2">
-                        <div class="rate-box">
-                          <i
-                            class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
-                          <span class="count fs-4 count-local">10</span>
-                        </div>
-                        <div class="rate-box">
-                          <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
-                          <span class="count fs-4">43</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4">
-                <div class="news-card">
-                  <img
-                    src="/img/news/content-2.jpg"
-                    class="post-image"
-                    alt="site is hacked" />
-                  <div class="p-3">
-                    <span class="bg bg-success news-status"> yangi </span>
-                    <div class="news-title">Targ'ibot ishlari</div>
-                    <p class="news-description">
-                      23-fevral sanasida texnikum oʻqituvchilari Djumanov
-                      Avazboy va Xalmuratova Mamuralar tomonidan maktablarda
-                      targʻibot tashviqot ishlari olib borildi.
-                    </p>
-                  </div>
-                  <!-- icons -->
-                  <div class="p-2">
-                    <div
-                      class="d-flex justify-content-start gap-3 px-0 px-md-3 mt-0">
-                      <p class="view-desktop">
-                        <i class="bi bi-eye-fill"></i> 138
-                      </p>
-                      <p class="date-desktop">
-                        <i class="bi bi-calendar-check-fill"></i> 23-02-2026
-                      </p>
-                      <div
-                        class="rate-container d-flex gap-3"
-                        data-post-id="static-3">
-                        <div class="rate-box">
-                          <i
-                            class="fa-regular fa-thumbs-down fs-4 rate-icon"></i>
-                          <span class="count fs-4 count-local">2</span>
-                        </div>
-                        <div class="rate-box">
-                          <i class="fa-regular fa-thumbs-up fs-4 rate-icon"></i>
-                          <span class="count fs-4">65</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
         <!-- /News dashboard -->
@@ -2113,18 +1992,17 @@
       <div class="news-card">
         <img src="${post.image_url}" class="post-image" alt="${post.title}" />
 
-        <div class="p-3">
+        <div class="p-3 text-overflow-custom">
           <span class="bg bg-success news-status text-white">yangi</span>
           <div class="news-title">${post.title}</div>
           <p class="news-description">${post.description}</p>
-        </div>
+
+          </div>
 
         <div class="p-2">
           <div class="d-flex justify-content-start gap-1 px-0 px-md-3 mt-0">
             <p class="view"><i class="bi bi-eye-fill"></i> 89</p>
             <p class="date "><i class="bi bi-calendar-check-fill mx-1"></i>${formatDate(post.date)}</p>
-
-            <!-- 🔥 MUHIM -->
             <div class="rate-container d-flex gap-3" data-post-id="${post.id}">
               <div class="rate-box" style = "width:60px;">
                 <i class="fa-regular fa-thumbs-down fs-4 rate-icon server-dislike"></i>
@@ -2147,11 +2025,11 @@
         const { data: posts } = await supabase
           .from("posts")
           .select("*")
-          .order("created_at", { ascending: false });
+          .order("date", { ascending: false });
 
         posts.forEach((post) => {
           const card = createNewsCard(post);
-          postsContainer.prepend(card);
+          postsContainer.append(card);
         });
       }
 
