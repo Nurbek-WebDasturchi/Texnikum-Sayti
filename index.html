@@ -1998,16 +1998,16 @@
 
         <div class="p-2">
           <div class="d-flex justify-content-start gap-1 px-0 px-md-3 mt-0">
-            <p class="view"><i class="bi bi-eye-fill"></i> 89</p>
+            <p class="view"><i class="bi bi-eye-fill"></i> ${post.view}</p>
             <p class="date "><i class="bi bi-calendar-check-fill mx-1"></i>${formatDate(post.date)}</p>
             <div class="rate-container d-flex gap-3" data-post-id="${post.id}">
               <div class="rate-box" style = "width:60px;">
                 <i class="fa-regular fa-thumbs-down fs-4 rate-icon server-dislike"></i>
-                <span class="count dislike-count fs-4">0</span>
+                <span class="count dislike-count fs-4">${post.dislike}</span>
               </div>
               <div class="rate-box ">
                 <i class="fa-regular fa-thumbs-up fs-4 rate-icon server-like"></i>
-                <span class="count fs-4 like-count">24</span>
+                <span class="count fs-4 like-count">${post.like}</span>
               </div>
             </div>
 
