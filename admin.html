@@ -93,6 +93,9 @@
                 Post qo'shish
               </button>
             </form>
+            <div class="w-100 loader-wrapper">
+              <div class="loader mt-3 hide"></div>
+            </div>
           </div>
           <!-- Yangilanishlar -->
           <div class="p-2 hide" id="updates">
@@ -290,10 +293,10 @@
       }
 
       const form = document.getElementById("post-form");
-
+      const wrapper = document.querySelector(".loader");
       form?.addEventListener("submit", async (e) => {
         e.preventDefault();
-
+        wrapper.classList.remove("hide");
         try {
           // 🔹 form qiymatlari
           const title = document.getElementById("title").value.trim();
